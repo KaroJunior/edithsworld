@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edith's World</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/x-icon" href="img/favicon.png">
+    <!-- Basic Meta Tags for SEO -->
+    <meta name="description" content="Shop at Edith’s World for high-quality perfumes, healthcare products, stylish clothes, and shoes. Discover the latest trends and timeless essentials all in one place!" />
+    <meta name="keywords" content="Edith's World, perfumes, healthcare products, stylish clothes, shoes, quality shopping, latest trends, online store" />
+    <meta name="author" content="Edith’s World" />
+
+    <!-- Open Graph Tags for Better Social Media Sharing -->
+    <meta property="og:title" content="Edith's World – Premium Online Shopping for Perfumes, Healthcare, Clothes & Shoes" />
+    <meta property="og:description" content="Explore Edith’s World for a unique selection of perfumes, healthcare essentials, clothes, and shoes. Quality and style, all in one place!" />
+    <meta property="og:image" content="img/slogo.png" />
+    <meta property="og:url" content="https://edithsworld.ng" />
+    <meta property="og:type" content="website" />
+
+    <!-- Twitter Card Tags for Enhanced Sharing on Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Edith's World – Your Destination for Perfumes, Healthcare, Clothes & Shoes" />
+    <meta name="twitter:description" content="Discover quality products and the latest trends in perfumes, healthcare, clothing, and footwear at Edith’s World." />
+    <meta name="twitter:image" content="img/slogo.png" /> 
+</head>
+<body>
+    <section id="header">
+        <a href="#"><img src="img/logo.png" class="logo" alt="Edith's World Landscape Logo"></a>
+
+        <div>
+            <ul id="navbar">
+                <li><a class="active" href="index.html">Home</a></li>
+                <li>
+                    <a href="#" id="shopmv"><span>Shop <span class="small-arrow">▼</span></span></a>
+                    <ul class="submenu">
+                        <li><a href="perfumes.html">Perfumes</a></li>
+                        <li><a href="healthcare.html">Healthcare</a></li>
+                        <li><a href="clothes.html">Clothes</a></li>
+                        <li><a href="shoes.html">Shoes</a></li>
+                    </ul>
+                </li>
+                <li><a href="blog.html" id="blogmv">Blog</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li>
+                    <div class="cart-btn" id="lg-bag">
+                        <button onclick="toggleCart()">
+                            <img src="img/cart.svg" alt="CartIcon">
+                            <span id="cart-count-lg" class="hidden">0</span>
+                        </button>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div id="mobile">
+            <div class="cart-btn">
+                <button onclick="toggleCart()">
+                    <img src="img/cart.svg" alt="CartIcon">
+                    <span id="cart-count-mobile" class="hidden">0</span>
+                </button>
+            </div>
+            <div class="menu-icon" onclick="toggleMenu()">&#9776;</div> <!-- Hamburger menu icon -->
+        </div>
+    </section>
+
+    <div id="cartModal" class="cart-modal">
+        <div class="cart-modal-content">
+            <span class="close" onclick="closeCart()">&times;</span>
+            <h2>Your Cart</h2>
+            <div id="cartItems"></div>
+            <div id="cartTotal"></div>
+            <button class="checkout-btn" onclick="checkout()">Checkout</button>
+        </div>
+    </div>
+
+    <section id="hero">
+        <div class="welcome-text">
+            <h4>WELCOME</h4>
+            <h4>TO EDITH'S WORLD</h4>
+        </div>
+        <h2>Exclusive Deals</h2>
+        <h1>Multipurpose Store</h1>
+        <p>Up to 50% Off!</p>
+    </section>
+
+    <section id="feature" class="section-p1">
+        <div class="fe-box">
+            <img src="img/features/f1.png" alt="Lite Shipping Inforgraphic">
+            <h6>Lite Shipping</h6>
+        </div>
+        <div class="fe-box">
+            <img src="img/features/f2.png" alt="Online Order Infographic">
+            <h6>Online Order</h6>
+        </div>
+        <div class="fe-box">
+            <img src="img/features/f3.png" alt="Save Money Inforgraphic">
+            <h6>Save Money</h6>
+        </div>
+        <div class="fe-box">
+            <img src="img/features/f4.png" alt="Promotions Inforgraphic">
+            <h6>Promotions</h6>
+        </div>
+        <div class="fe-box">
+            <img src="img/features/f5.png" alt="Happy Sell Inforgraphic">
+            <h6>Happy Sell</h6>
+        </div>
+        <div class="fe-box">
+            <img src="img/features/f6.png" alt="24/7 Support Infographic">
+            <h6>24/7 Support</h6>
+        </div>
+    </section>
+
+    <section id="product1" class="section-p1">
+        <h2>Featured Products</h2>
+        <p>Top Picks This Season</p>
+        <div class="pro-container">
+            <div class="pro">
+                <img src="img/perf/p1.jpg" alt="Product Image">
+                <div class="des">
+                    <span>perfume</span>
+                    <h5>Big Boss</h5>
+                    <div class="star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                    </div>
+                    <h4>₦3500</h4>
+                    <p class="resell-price">Can resell for: ₦4500-₦5000</p>
+                </div>
+                <button onclick="addToCart('Big Boss (perfume)', 3500)" class="addtocart-button">
+                    <div class="cartbtn">
+                        <img src="img/cart.svg" alt="Cart">
+                    </div>
+                </button>
+            </div>
+            <div class="pro">
+                <img src="img/clothes/c21.jpg" alt="Product Image">
+                <div class="des">
+                    <span>clothes</span>
+                    <h5>Quality Ladies Cloth 13</h5>
+                    <div class="star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                    </div>
+                    <h4>₦20000</h4>
+                </div>
+                <button onclick="addToCart('Quality Ladies Cloth 13 (clothes)', 20000)" class="addtocart-button">
+                    <div class="cartbtn">
+                        <img src="img/cart.svg" alt="Cart">
+                    </div>
+                </button>
+            </div>
+            <div class="pro">
+                <img src="img/perf/p6.jpg" alt="Product Image">
+                <div class="des">
+                    <span>perfume</span>
+                    <h5>Temptation</h5>
+                    <div class="star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                    </div>
+                    <h4>₦3500</h4>
+                    <p class="resell-price">Can resell for: ₦4500-₦5000</p>
+                </div>
+                <button onclick="addToCart('Temptation (perfume)', 3500)" class="addtocart-button">
+                    <div class="cartbtn">
+                        <img src="img/cart.svg" alt="Cart">
+                    </div>
+                </button>
+            </div>
+            <div class="pro">
+                <img src="img/shoes/s22.jpg" alt="Product Image">
+                <div class="des">
+                    <span>shoes</span>
+                    <h5>N Canvas</h5>
+                    <div class="star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                    </div>
+                    <h4>₦27000</h4>
+                    <p class="resell-price">Sizes 39-42</p>
+                </div>
+                <button onclick="addToCart('N Canvas (shoes)', 27000)" class="addtocart-button">
+                    <div class="cartbtn">
+                        <img src="img/cart.svg" alt="Cart">
+                    </div>
+                </button>
+            </div>
+            <div class="pro">
+                <img src="img/health/h53.jpg" alt="Product Image">
+                <div class="des">
+                    <span>healthcare</span>
+                    <h5>Propolis Lecithin Capsules</h5>
+                    <div class="star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                    </div>
+                    <h4>₦23000</h4>
+                </div>
+                <button onclick="addToCart('Propolis Lecithin Capsules (healthcare)', 23000)" class="addtocart-button">
+                    <div class="cartbtn">
+                        <img src="img/cart.svg" alt="Cart">
+                    </div>
+                </button>
+            </div>
+            <div class="pro">
+                <img src="img/shoes/s8.jpg" alt="Product Image">
+                <div class="des">
+                    <span>shoes</span>
+                    <h5>White Sneakers</h5>
+                    <div class="star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                    </div>
+                    <h4>₦18000</h4>
+                    <p class="resell-price">Sizes 38-42</p>
+                </div>
+                <button onclick="addToCart('White Sneakers (shoes)', 18000)" class="addtocart-button">
+                    <div class="cartbtn">
+                        <img src="img/cart.svg" alt="Cart">
+                    </div>
+                </button>
+            </div>
+            <div class="pro">
+                <img src="img/health/h38.jpg" alt="Product Image">
+                <div class="des">
+                    <span>healthcare</span>
+                    <h5>Norland Health Way Capsules for Cure of Diabetes</h5>
+                    <div class="star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                    </div>
+                    <h4>₦32000</h4>
+                </div>
+                <button onclick="addToCart('Norland Health Way Capsules for Cure of Diabetes (healthcare)', 32000)" class="addtocart-button">
+                    <div class="cartbtn">
+                        <img src="img/cart.svg" alt="Cart">
+                    </div>
+                </button>
+            </div>
+            <div class="pro">
+                <img src="img/clothes/c4.jpg" alt="Product Image">
+                <div class="des">
+                    <span>clothes</span>
+                    <h5>Boys Up and Down</h5>
+                    <div class="star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                    </div>
+                    <h4>₦15000</h4>
+                    <p class="resell-price">3 to 6 years</p>
+                </div>
+                <button onclick="addToCart('Boys Up and Down (clothes)', 15000)" class="addtocart-button">
+                    <div class="cartbtn">
+                        <img src="img/cart.svg" alt="Cart">
+                    </div>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <div class="shop-sections">
+        <h2>Shop by Category</h2>
+        <div class="shop-cards">
+            <div class="shop-card">
+                <a href="perfumes.html">
+                     <img src="img/banner/s1.png" alt="Perfume">
+                </a>
+                 <h3>Perfumes</h3>
+             </div>
+            <div class="shop-card">
+               <a href="healthcare.html">
+                    <img src="img/banner/s2.png" alt="Healthcare">
+               </a>
+                <h3>Healthcare</h3>
+            </div>
+            <div class="shop-card">
+               <a href="clothes.html">
+                    <img src="img/banner/s4.png" alt="Clothes">
+               </a>
+               <h3>Clothes</h3>
+            </div>
+            <div class="shop-card">
+               <a href="shoes.html">
+                    <img src="img/banner/s3.png" alt="Shoes">
+               </a>
+               <h3>Shoes</h3>
+            </div>
+        </div>
+    </div>
+
+    <section id="banner" class="section-m1">
+        <h4>Special Offer</h4>
+        <h2>Up to <span>50% Off</span> on Health Products</h2>
+        <a href="healthcare.html"><button class="normal">Explore More</button></a>
+    </section>
+
+    <section id="product1" class="section-p1">
+        <h2>New Arrivals</h2>
+        <p>Fresh Picks for You</p>      
+        <div class="pro-container">
+            <div class="pro">
+                <img src="img/clothes/c11.jpg" alt="Product Image">
+                <div class="des">
+                    <span>clothes</span>
+                    <h5>Quality Ladies Cloth 3</h5>
+                    <div class="star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                    </div>
+                    <h4>₦20000</h4>
+                </div>
+                <button onclick="addToCart('Quality Ladies Cloth 3 (clothes)', 20000)" class="addtocart-button">
+                    <div class="cartbtn">
+                        <img src="img/cart.svg" alt="Cart">
+                    </div>
+                </button>
+            </div>
+            <div class="pro">
+                <img src="img/health/h15.jpg" alt="Product Image">
+                <div class="des">
+                    <span>healthcare</span>
+                    <h5>Norland Natural B Carotene</h5>
+                    <div class="star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                    </div>
+                    <h4>₦23000</h4>
+                </div>
+                <button onclick="addToCart('Norland Natural B Carotene (healthcare)', 23000)" class="addtocart-button">
+                    <div class="cartbtn">
+                        <img src="img/cart.svg" alt="Cart">
+                    </div>
+                </button>
+            </div>
+            <div class="pro">
+                <img src="img/perf/p47.jpg" alt="Product Image">
+                <div class="des">
+                    <span>perfume</span>
+                    <h5>Combo 10000</h5>
+                    <div class="star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                    </div>
+                    <h4>₦10000</h4>
+                    <p class="resell-price">Can resell for: ₦11000-₦12000</p>
+                </div>
+                <button onclick="addToCart('Combo 10000 (perfume)', 10000)" class="addtocart-button">
+                    <div class="cartbtn">
+                        <img src="img/cart.svg" alt="Cart">
+                    </div>
+                </button>
+            </div>
+            <div class="pro">
+                <img src="img/health/h16.jpg" alt="Product Image">
+                <div class="des">
+                    <span>healthcare</span>
+                    <h5>Health Way Calcium Powder</h5>
+                    <div class="star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                    </div>
+                    <h4>₦21000</h4>
+                </div>
+                <button onclick="addToCart('Health Way Calcium Powder (healthcare)', 21000)" class="addtocart-button">
+                    <div class="cartbtn">
+                        <img src="img/cart.svg" alt="Cart">
+                    </div>
+                </button>
+            </div>
+            <div class="pro">
+                <img src="img/health/h23.jpg" alt="Product Image">
+                <div class="des">
+                    <span>healthcare</span>
+                    <h5>Full Treatment Pack for any kind of Infection in both Male and Female</h5>
+                    <div class="star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                    </div>
+                    <h4>₦86500</h4>
+                </div>
+                <button onclick="addToCart('Full Treatment Pack for any kind of Infection in both Male and Female (healthcare)', 86500)" class="addtocart-button">
+                    <div class="cartbtn">
+                        <img src="img/cart.svg" alt="Cart">
+                    </div>
+                </button>
+            </div>
+            <div class="pro">
+                <img src="img/health/h29.jpg" alt="Product Image">
+                <div class="des">
+                    <span>healthcare</span>
+                    <h5>Feminelle Intimate Wash</h5>
+                    <div class="star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                    </div>
+                    <h4>₦12000</h4>
+                    <p class="resell-price">Per Bottle</p>
+                </div>
+                <button onclick="addToCart('Feminelle Intimate Wash (healthcare)', 12000)" class="addtocart-button">
+                    <div class="cartbtn">
+                        <img src="img/cart.svg" alt="Cart">
+                    </div>
+                </button>
+            </div>
+            <div class="pro">
+                <img src="img/perf/p67.jpg" alt="Product Image">
+                <div class="des">
+                    <span>perfume</span>
+                    <h5>Undiluted 30ml Oil Perfume</h5>
+                    <div class="star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                    </div>
+                    <h4>₦4700</h4>
+                    <p class="dozen-price">Dozen: ₦54000</p>
+                </div>
+                <button onclick="addToCart('Undiluted 30ml Oil Perfume (perfume)', 4700)" class="addtocart-button">
+                    <div class="cartbtn">
+                        <img src="img/cart.svg" alt="Cart">
+                    </div>
+                </button>
+            </div>
+            <div class="pro">
+                <img src="img/shoes/s8.jpg" alt="Product Image">
+                <div class="des">
+                    <span>shoes</span>
+                    <h5>White Sneakers</h5>
+                    <div class="star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                    </div>
+                    <h4>₦18000</h4>
+                    <p class="resell-price">Sizes 38-42</p>
+                </div>
+                <button onclick="addToCart('White Sneakers (shoes)', 18000)" class="addtocart-button">
+                    <div class="cartbtn">
+                        <img src="img/cart.svg" alt="Cart">
+                    </div>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <section id="sm-banner" class="section-p1">
+        <div class="banner-box">
+            <h4>Crazy Deals</h4>
+            <h2>Buy 1 Get 1 Free</h2>
+            <span>Best deals on Perfumes & more</span>
+            <a href="perfumes.html"><button class="white">Shop Now</button></a>
+        </div>
+        <div class="banner-box banner-box2">
+            <h4>New Season</h4>
+            <h2>Fresh Arrivals</h2>
+            <span>Explore our latest collection</span>
+            <a href="clothes.html"><button class="white">Browse</button></a>
+        </div>
+    </section>
+
+    <section id="banner3">
+        <div class="banner-box">
+            <h2>SEASONAL SALE</h2>
+            <h3>Up to 50% Off - Health Products</h3>
+        </div>
+        <div class="banner-box banner-box2">
+            <h2>NEW FOOTWEAR</h2>
+            <h3>Spring/Summer 2024</h3>
+        </div>
+        <div class="banner-box banner-box3">
+            <h2>CLOTHING</h2>
+            <h3>Fresh Styles & Trends</h3>
+        </div>
+    </section>
+
+    <section id="newsletter" class="section-p1 section-m1">
+        <div class="newstext">
+            <h4>Sign Up For Newsletters</h4>
+            <p>Get E-mail updates about our latest shop and <span>special offers.</span></p>
+        </div>
+        <form class="form" action="https://submit-form.com/xQh5bc5fo" method="post">
+            <input type="text" name="email" placeholder="Your email address" required>
+            <button class="normal" type="submit">Sign Up</button>
+        </form>
+    </section>
+
+    <footer class="section-p1">
+        <div class="col">
+            <img class="logo" src="img/logo1.png" alt="Edith's World Landscape Logo">
+            <h4>Contact</h4>
+            <p><strong>Address:</strong> 7 Olorunisola street, Mushin Market, Lagos, Nigeria</p>
+            <p><strong>Phone:</strong> <a href="https://wa.me/+2348037906641" class="link">08037906641</a></p>
+            <p><strong>Hours:</strong> 08:00 - 20:00. Mon - Sat</p>
+            <div class="follow">
+                <h4>Follow Us</h4>
+                <div class="icon">
+                    <a href="https://www.facebook.com/profile.php?id=100091634023999&mibextid=ZbWKwL">
+                        <img src="img/fb.svg" alt="Facebook Page Icon">
+                    </a>
+                    <a href="https://www.facebook.com/profile.php?id=61562935919298&mibextid=ZbWKwL">
+                        <img src="img/fb.svg" alt="Facebook Page Icon">
+                    </a>
+                    <a href="https://www.instagram.com/unique_quality.perfumery1212?igsh=MnhheWJtZWMwdjBi">
+                        <img src="img/it.svg" alt="Instagram Icon">
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <h4>Shop</h4>
+            <a href="perfumes.html">Perfumes</a>
+            <a href="healthcare.html">Healthcare</a>
+            <a href="clothes.html">Clothes</a>
+            <a href="shoes.html">Shoes</a>
+            <a href="contact.html">Contact Us</a>
+        </div>
+        <div class="col">
+            <h4>Commnunity</h4>
+            <a href="https://www.facebook.com/profile.php?id=100091634023999&mibextid=ZbWKwL">Perfume Page</a>
+            <a href="https://www.facebook.com/profile.php?id=61562935919298&mibextid=ZbWKwL">Clothes Page</a>
+            <a href="https://chat.whatsapp.com/LdeGqw7hKcX8o4kTsRX0Z2">Perfume Group</a>
+            <a href="https://chat.whatsapp.com/BwMUFrqKMdg5NwULuShPTe">Clothes Group</a>
+            <a href="https://chat.whatsapp.com/KjdcWhLzmEz2msfB8RqZMI">Health Group</a>
+        </div>
+        <div class="col install">
+            <h4>Install App</h4>
+            <p>Available for Direct Download</p>
+            <div class="row">
+                <a href="http://www.appcreator24.com/app3349698-p3wqki"><img src="img/pay/download.png" alt="Download Button for Mobile App"></a>
+            </div>
+            <p>Simple & Secure Payments</p>
+        </div>
+        <div class="copyright">
+            <p>© 2024 Edith's World</p>
+        </div>
+    </footer>
+    
+
+    <script src="script.js"></script>
+</body>
+</html>

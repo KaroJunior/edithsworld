@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Edith's World</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/x-icon" href="img/favicon.png">
+    <!-- Basic Meta Tags for SEO -->
+    <meta name="description" content="Learn about Edith’s World, where quality meets style. Discover our commitment to providing premium perfumes, healthcare products, stylish clothes, and shoes for a complete shopping experience." />
+    <meta name="keywords" content="about Edith's World, premium products, quality perfumes, healthcare essentials, stylish clothes, shoes, trusted brand" />
+    <meta name="author" content="Edith’s World" />
+
+    <!-- Open Graph Tags for Social Media Sharing -->
+    <meta property="og:title" content="About Edith's World – Quality & Style in Every Product" />
+    <meta property="og:description" content="Edith’s World is dedicated to bringing you high-quality perfumes, healthcare essentials, and stylish fashion items. Explore our story and values." />
+    <meta property="og:image" content="img/slogo.png" />
+    <meta property="og:url" content="https://edithsworld.ng/about" />
+    <meta property="og:type" content="website" />
+
+    <!-- Twitter Card Tags for Enhanced Sharing on Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="About Edith's World – Your Source for Quality Perfumes, Healthcare & Fashion" />
+    <meta name="twitter:description" content="Get to know Edith's World and our mission to offer quality perfumes, healthcare products, stylish clothes, and shoes." />
+    <meta name="twitter:image" content="img/slogo.png" /> 
+</head>
+<body>
+    <section id="header">
+        <a href="#"><img src="img/logo.png" class="logo" alt="Edith's World Landscape Logo"></a>
+
+        <div>
+            <ul id="navbar">
+                <li><a href="index.html">Home</a></li>
+                <li>
+                    <a href="#" id="shopmv"><span>Shop <span class="small-arrow">▼</span></span></a>
+                    <ul class="submenu">
+                        <li><a href="perfumes.html">Perfumes</a></li>
+                        <li><a href="healthcare.html">Healthcare</a></li>
+                        <li><a href="clothes.html">Clothes</a></li>
+                        <li><a href="shoes.html">Shoes</a></li>
+                    </ul>
+                </li>
+                <li><a href="blog.html" id="blogmv">Blog</a></li>
+                <li><a class="active" href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li>
+                    <div class="cart-btn" id="lg-bag">
+                        <button onclick="toggleCart()">
+                            <img src="img/cart.svg" alt="CartIcon">
+                            <span id="cart-count-lg" class="hidden">0</span>
+                        </button>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div id="mobile">
+            <div class="cart-btn">
+                <button onclick="toggleCart()">
+                    <img src="img/cart.svg" alt="CartIcon">
+                    <span id="cart-count-mobile" class="hidden">0</span>
+                </button>
+            </div>
+            <div class="menu-icon" onclick="toggleMenu()">&#9776;</div> <!-- Hamburger menu icon -->
+        </div>
+    </section>
+
+    <div id="cartModal" class="cart-modal">
+        <div class="cart-modal-content">
+            <span class="close" onclick="closeCart()">&times;</span>
+            <h2>Your Cart</h2>
+            <div id="cartItems"></div>
+            <div id="cartTotal"></div>
+            <button class="checkout-btn" onclick="checkout()">Checkout</button>
+        </div>
+    </div>
+
+    <section id="page-header" class="about-header">
+        <h2>About Us</h2>
+        <p>Discover the essence of Edith's World and our core values.</p>
+    </section>
+    
+    <section id="about-head" class="section-p1">
+        <img src="img/about/abtimg.png" alt="Edith's World Team" class="about-img">
+        <div>
+            <h2>Who We Are</h2>
+            <p>
+                At Edith's World, we believe in the power of quality products and exceptional service. Our brand is built on trust, innovation, and a commitment to sustainability. We curate a wide range of products, from perfumes to healthcare items, ensuring that every selection reflects our passion for excellence.
+            </p>
+            <p>
+                Our dedicated team is here to provide you with an unforgettable shopping experience, helping you find exactly what you need. Whether you're looking for the latest trends in fashion or timeless classics, Edith's World is your one-stop destination.
+            </p>
+            <p>
+                <abbr title="Our Promise">Join us</abbr> in our journey towards creating a better shopping experience. We strive to connect you with products that resonate with your lifestyle and values.
+            </p>
+            <br>
+            <marquee bgcolor="#f0f0f0" loop="-1" scrollamount="5" width="100%">
+                Discover exclusive offers and updates at Edith's World – your satisfaction is our priority!
+            </marquee>
+        </div>
+    </section>
+
+    <section id="about-app" class="section-p1">
+        <h1>Download Our <a href="http://www.appcreator24.com/app3349698-p3wqki">App</a></h1>
+        <div class="image">
+            <img src="img/about/a.png" alt="Download App Banner">
+        </div>
+    </section>
+
+    <section id="feature" class="section-p1">
+        <div class="fe-box">
+            <img src="img/features/f1.png" alt="">
+            <h6>Lite Shipping</h6>
+        </div>
+        <div class="fe-box">
+            <img src="img/features/f2.png" alt="">
+            <h6>Online Order</h6>
+        </div>
+        <div class="fe-box">
+            <img src="img/features/f3.png" alt="">
+            <h6>Save Money</h6>
+        </div>
+        <div class="fe-box">
+            <img src="img/features/f4.png" alt="">
+            <h6>Promotions</h6>
+        </div>
+        <div class="fe-box">
+            <img src="img/features/f5.png" alt="">
+            <h6>Happy Sell</h6>
+        </div>
+        <div class="fe-box">
+            <img src="img/features/f6.png" alt="">
+            <h6>24/7 Support</h6>
+        </div>
+    </section>
+
+    <section id="newsletter" class="section-p1 section-m1">
+        <div class="newstext">
+            <h4>Sign Up For Newsletters</h4>
+            <p>Get E-mail updates about our latest shop and <span>special offers.</span></p>
+        </div>
+        <form class="form" action="https://submit-form.com/xQh5bc5fo" method="post">
+            <input type="text" name="email" placeholder="Your email address" required>
+            <button class="normal" type="submit">Sign Up</button>
+        </form>
+    </section>
+
+
+    <footer class="section-p1">
+        <div class="col">
+            <img class="logo" src="img/logo1.png" alt="Edith's World Landscape Logo">
+            <h4>Contact</h4>
+            <p><strong>Address:</strong> 7 Olorunisola street, Mushin Market, Lagos, Nigeria</p>
+            <p><strong>Phone:</strong> <a href="https://wa.me/+2348037906641" class="link">08037906641</a></p>
+            <p><strong>Hours:</strong> 08:00 - 20:00. Mon - Sat</p>
+            <div class="follow">
+                <h4>Follow Us</h4>
+                <div class="icon">
+                    <a href="https://www.facebook.com/profile.php?id=100091634023999&mibextid=ZbWKwL">
+                        <img src="img/fb.svg" alt="Facebook Page Icon">
+                    </a>
+                    <a href="https://www.facebook.com/profile.php?id=61562935919298&mibextid=ZbWKwL">
+                        <img src="img/fb.svg" alt="Facebook Page Icon">
+                    </a>
+                    <a href="https://www.instagram.com/unique_quality.perfumery1212?igsh=MnhheWJtZWMwdjBi">
+                        <img src="img/it.svg" alt="Instagram Icon">
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <h4>Shop</h4>
+            <a href="perfumes.html">Perfumes</a>
+            <a href="healthcare.html">Healthcare</a>
+            <a href="clothes.html">Clothes</a>
+            <a href="shoes.html">Shoes</a>
+            <a href="contact.html">Contact Us</a>
+        </div>
+        <div class="col">
+            <h4>Commnunity</h4>
+            <a href="https://www.facebook.com/profile.php?id=100091634023999&mibextid=ZbWKwL">Perfume Page</a>
+            <a href="https://www.facebook.com/profile.php?id=61562935919298&mibextid=ZbWKwL">Clothes Page</a>
+            <a href="https://chat.whatsapp.com/LdeGqw7hKcX8o4kTsRX0Z2">Perfume Group</a>
+            <a href="https://chat.whatsapp.com/BwMUFrqKMdg5NwULuShPTe">Clothes Group</a>
+            <a href="https://chat.whatsapp.com/KjdcWhLzmEz2msfB8RqZMI">Health Group</a>
+        </div>
+        <div class="col install">
+            <h4>Install App</h4>
+            <p>Available for Direct Download</p>
+            <div class="row">
+                <a href="http://www.appcreator24.com/app3349698-p3wqki"><img src="img/pay/download.png" alt="Download Button for Mobile App"></a>
+            </div>
+            <p>Simple & Secure Payments</p>
+        </div>
+        <div class="copyright">
+            <p>© 2024 Edith's World</p>
+        </div>
+    </footer>
+    
+
+    <script src="script.js"></script>
+</body>
+</html>

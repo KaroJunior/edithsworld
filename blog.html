@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - Edith's World</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/x-icon" href="img/favicon.png">
+    <!-- Basic Meta Tags for SEO -->
+    <meta name="description" content="Stay updated with the latest trends, tips, and insights on perfumes, healthcare, fashion, and lifestyle with the Edith’s World Blog." />
+    <meta name="keywords" content="Edith's World Blog, perfume trends, healthcare tips, fashion tips, lifestyle insights, beauty and wellness, style guides" />
+    <meta name="author" content="Edith’s World" />
+
+    <!-- Open Graph Tags for Social Media Sharing -->
+    <meta property="og:title" content="Edith’s World Blog – Trends & Tips in Perfume, Healthcare, and Fashion" />
+    <meta property="og:description" content="Explore the Edith’s World Blog for expert insights on the latest in perfumes, healthcare, fashion, and lifestyle." />
+    <meta property="og:image" content="img/slogo.png" /> 
+    <meta property="og:url" content="https://edithsworld.ng/blog" />
+    <meta property="og:type" content="website" />
+
+    <!-- Twitter Card Tags for Enhanced Sharing on Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Edith's World Blog – Discover Trends & Insights in Lifestyle and Wellness" />
+    <meta name="twitter:description" content="Get tips and trends in perfumes, healthcare, fashion, and lifestyle on the Edith’s World Blog." />
+    <meta name="twitter:image" content="img/slogo.png" />
+<body>
+    <section id="header">
+        <a href="#"><img src="img/logo.png" class="logo" alt="Edith's World Landscape Logo"></a>
+
+        <div>
+            <ul id="navbar">
+                <li><a href="index.html">Home</a></li>
+                <li>
+                    <a href="#" id="shopmv"><span>Shop <span class="small-arrow">▼</span></span></a>
+                    <ul class="submenu">
+                        <li><a href="perfumes.html">Perfumes</a></li>
+                        <li><a href="healthcare.html">Healthcare</a></li>
+                        <li><a href="clothes.html">Clothes</a></li>
+                        <li><a href="shoes.html">Shoes</a></li>
+                    </ul>
+                </li>
+                <li><a class="active" href="blog.html" id="blogmv">Blog</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li>
+                    <div class="cart-btn" id="lg-bag">
+                        <button onclick="toggleCart()">
+                            <img src="img/cart.svg" alt="CartIcon">
+                            <span id="cart-count-lg" class="hidden">0</span>
+                        </button>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div id="mobile">
+            <div class="cart-btn">
+                <button onclick="toggleCart()">
+                    <img src="img/cart.svg" alt="CartIcon">
+                    <span id="cart-count-mobile" class="hidden">0</span>
+                </button>
+            </div>
+            <div class="menu-icon" onclick="toggleMenu()">&#9776;</div> <!-- Hamburger menu icon -->
+        </div>
+    </section>
+
+    <div id="cartModal" class="cart-modal">
+        <div class="cart-modal-content">
+            <span class="close" onclick="closeCart()">&times;</span>
+            <h2>Your Cart</h2>
+            <div id="cartItems"></div>
+            <div id="cartTotal"></div>
+            <button class="checkout-btn" onclick="checkout()">Checkout</button>
+        </div>
+    </div>
+
+    <section id="page-header" class="blog-header">
+        <h2>Explore Our World</h2>
+        <p>Discover tips, trends, and guides for health, beauty, and fashion.</p>
+    </section>
+
+    <section id="blog">
+        <div class="blog-box">
+            <div class="blog-img">
+                <img src="img/blog/b3.jpg" alt="">
+            </div>
+            <div class="blog-details">
+                <h4>Welcome to Edith's World </h4>
+                <p>Hi guys, welcome to Edith's World  page where you can get  the things you 
+                    need to look dashing and....</p>
+                <a href="https://web.facebook.com/share/p/zMegy69TvZPq1MEC/?mibextid=ZbWKwL">CONTINUE READING</a>
+            </div>
+            <h1>18/07</h1>
+        </div> 
+        <div class="blog-box">
+            <div class="blog-img">
+                <img src="img/blog/b6.jpg" alt="">
+            </div>
+            <div class="blog-details">
+                <h4>What's Stopping You?</h4>
+                <p>If you know how profitable this perfume business is, you would have started it long time ago....</p>
+                <a href="https://web.facebook.com/share/p/ik7PEWo1W3HMD49d/?mibextid=ZbWKwL">CONTINUE READING</a>
+            </div>
+            <h1>08/07</h1>
+        </div> 
+        <div class="blog-box">
+            <div class="blog-img">
+                <img src="img/blog/b1.jpg" alt="">
+            </div>
+            <div class="blog-details">
+                <h4>Health is  Wealth</h4>
+                <p>As you all know that health is wealth but I feel so bad seeing that majority 
+                    of people in this country takes their wealth more serious than....</p>
+                <a href="https://web.facebook.com/share/p/oZ6tB1e9JcWcQX5m/?mibextid=ZbWKwL">CONTINUE READING</a>
+            </div>
+            <h1>5/09</h1>
+        </div> 
+        <div class="blog-box">
+            <div class="blog-img">
+                <img src="img/blog/b2.jpg" alt="">
+            </div>
+            <div class="blog-details">
+                <h4>Health Priority</h4>
+                <p>One's health should be his or her number one priority because it's only 
+                    when you are in good health that you can ....</p>
+                <a href="https://web.facebook.com/share/p/38n3RWUWXY4swKmW/">CONTINUE READING</a>
+            </div>
+            <h1>5/09</h1>
+        </div> 
+        <div class="blog-box">
+            <div class="blog-img">
+                <img src="img/blog/b4.jpg" alt="">
+            </div>
+            <div class="blog-details">
+                <h4>Lucrative Perfume Business</h4>
+                <p>It's quite unfortunate that some people are still idle waiting for 
+                    someone to be giving them money to take....</p>
+                <a href="https://web.facebook.com/share/p/UnyDGJ1j41YcE7Cc/?mibextid=ZbWKwL">CONTINUE READING</a>
+            </div>
+            <h1>14/09</h1>
+        </div> 
+    </section>
+
+    <section id="newsletter" class="section-p1 section-m1">
+        <div class="newstext">
+            <h4>Sign Up For Newsletters</h4>
+            <p>Get E-mail updates about our latest shop and <span>special offers.</span></p>
+        </div>
+        <form class="form" action="https://submit-form.com/xQh5bc5fo" method="post">
+            <input type="text" name="email" placeholder="Your email address" required>
+            <button class="normal" type="submit">Sign Up</button>
+        </form>
+    </section>
+
+    <footer class="section-p1">
+        <div class="col">
+            <img class="logo" src="img/logo1.png" alt="Edith's World Landscape Logo">
+            <h4>Contact</h4>
+            <p><strong>Address:</strong> 7 Olorunisola street, Mushin Market, Lagos, Nigeria</p>
+            <p><strong>Phone:</strong> <a href="https://wa.me/+2348037906641" class="link">08037906641</a></p>
+            <p><strong>Hours:</strong> 08:00 - 20:00. Mon - Sat</p>
+            <div class="follow">
+                <h4>Follow Us</h4>
+                <div class="icon">
+                    <a href="https://www.facebook.com/profile.php?id=100091634023999&mibextid=ZbWKwL">
+                        <img src="img/fb.svg" alt="Facebook Page Icon">
+                    </a>
+                    <a href="https://www.facebook.com/profile.php?id=61562935919298&mibextid=ZbWKwL">
+                        <img src="img/fb.svg" alt="Facebook Page Icon">
+                    </a>
+                    <a href="https://www.instagram.com/unique_quality.perfumery1212?igsh=MnhheWJtZWMwdjBi">
+                        <img src="img/it.svg" alt="Instagram Icon">
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <h4>Shop</h4>
+            <a href="perfumes.html">Perfumes</a>
+            <a href="healthcare.html">Healthcare</a>
+            <a href="clothes.html">Clothes</a>
+            <a href="shoes.html">Shoes</a>
+            <a href="contact.html">Contact Us</a>
+        </div>
+        <div class="col">
+            <h4>Commnunity</h4>
+            <a href="https://www.facebook.com/profile.php?id=100091634023999&mibextid=ZbWKwL">Perfume Page</a>
+            <a href="https://www.facebook.com/profile.php?id=61562935919298&mibextid=ZbWKwL">Clothes Page</a>
+            <a href="https://chat.whatsapp.com/LdeGqw7hKcX8o4kTsRX0Z2">Perfume Group</a>
+            <a href="https://chat.whatsapp.com/BwMUFrqKMdg5NwULuShPTe">Clothes Group</a>
+            <a href="https://chat.whatsapp.com/KjdcWhLzmEz2msfB8RqZMI">Health Group</a>
+        </div>
+        <div class="col install">
+            <h4>Install App</h4>
+            <p>Available for Direct Download</p>
+            <div class="row">
+                <a href="http://www.appcreator24.com/app3349698-p3wqki"><img src="img/pay/download.png" alt="Download Button for Mobile App"></a>
+            </div>
+            <p>Simple & Secure Payments</p>
+        </div>
+        <div class="copyright">
+            <p>© 2024 Edith's World</p>
+        </div>
+    </footer>
+    
+
+    <script src="script.js"></script>
+</body>
+</html>

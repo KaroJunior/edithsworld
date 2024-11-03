@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout - Edith's World</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="checkout.css">
+    <link rel="icon" type="image/x-icon" href="img/favicon.png">
+</head>
+<body>
+    <section id="header">
+        <a href="#"><img src="img/logo.png" class="logo" alt="Edith's World Landscape Logo"></a>
+        <div>
+            <ul id="navbar">
+                <li><a href="index.html">Home</a></li>
+                <li>
+                    <a href="#" id="shopmv"><span>Shop <span class="small-arrow">▼</span></span></a>
+                    <ul class="submenu">
+                        <li><a href="perfumes.html">Perfumes</a></li>
+                        <li><a href="healthcare.html">Healthcare</a></li>
+                        <li><a href="clothes.html">Clothes</a></li>
+                        <li><a href="shoes.html">Shoes</a></li>
+                    </ul>
+                </li>
+                <li><a href="blog.html" id="blogmv">Blog</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li>
+                    <div class="cart-btn" id="lg-bag">
+                        <button onclick="toggleCart()">
+                            <img src="img/cart.svg" alt="CartIcon">
+                            <span id="cart-count-lg" class="hidden">0</span>
+                        </button>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div id="mobile">
+            <div class="cart-btn">
+                <button onclick="toggleCart()">
+                    <img src="img/cart.svg" alt="CartIcon">
+                    <span id="cart-count-mobile" class="hidden">0</span>
+                </button>
+            </div>
+            <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
+        </div>
+    </section>
+
+    <div id="cartModal" class="cart-modal">
+        <div class="cart-modal-content">
+            <span class="close" onclick="closeCart()">&times;</span>
+            <h2>Your Cart</h2>
+            <div id="cartItems"></div>
+            <div id="cartTotal"></div>
+            <button class="checkout-btn" onclick="checkout()">Checkout</button>
+        </div>
+    </div>
+
+    <main>
+        <div class="checkout-container">
+            <h1>CHECKOUT</h1>
+            <form id="checkoutForm" action="https://submit-form.com/Tpx8BLt3u" method="POST">
+
+                <!-- Order ID Section -->
+                <section class="checkout-section">
+                    <h2>Order Information</h2>
+                    <p id="orderId"><strong>Order ID:</strong> <span id="orderIdValue"></span></p>
+                    <p class="order-reminder"><strong>Please save your Order ID for future reference regarding your order.</strong></p>
+                </section>
+                
+                <!-- Contact Section -->
+                <section class="checkout-section">
+                    <h2>Contact Information</h2>
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required placeholder="johndoe@gmail.com">
+                    
+                    <label for="fullName">Full Name</label>
+                    <input type="text" id="fullName" name="fullName" required placeholder="John Doe">
+                </section>
+    
+                <!-- Billing Information Section -->
+                <section class="checkout-section">
+                    <h2>Billing Information</h2>
+                    <label for="address">Address</label>
+                    <input type="text" id="address" name="address" required placeholder="123 Main St">
+                    
+                    <label for="city">City</label>
+                    <input type="text" id="city" name="city" required placeholder="Lagos">
+                    
+                    <label for="state">State</label>
+                    <input type="text" id="state" name="state" required placeholder="Lagos State">
+                    
+                    <label for="postalCode">Postal Code</label>
+                    <input type="text" id="postalCode" name="postalCode" required placeholder="100001">
+                </section>
+    
+                <!-- Custom Note Section -->
+                <section class="checkout-section">
+                    <h2>Custom Note</h2>
+                    <label for="customNote">Leave a note for the seller (optional)</label>
+                    <textarea id="customNote" name="customNote" rows="4" placeholder="Type any additional instructions here..."></textarea>
+                </section>
+    
+                <!-- Order Summary Section -->
+                <section class="checkout-section">
+                    <h2>Order Summary</h2>
+                    <p id="itemCount">Total Items: 0</p>
+                    <p id="totalAmount" class="bold-text">Amount: ₦0.00</p>
+                    <p><strong>Note:</strong> Delivery fee will be calculated and communicated to you after order submission.</p>
+                </section>
+    
+                <!-- Payment Information Section -->
+                <section class="checkout-section">
+                    <h2>Payment Information</h2>
+                    <p>Please make a transfer of your payment to the following account:</p>
+                    <p><strong>Bank Name: First Bank</strong></p>
+                    <p><strong>Account Number: 3028222414</strong></p>
+                    <p><strong>Account Name: Ugwuonah Edith Ugochukwu</strong></p>
+                </section>
+    
+                <!-- Payment Confirmation Section -->
+                <section class="checkout-section">
+                    <h2>Payment Confirmation</h2>
+                    <p>Please provide details of payment made in order for us to confirm the payment.</p>
+                    <div class="grid-container">
+                        <div>
+                            <label for="bankName">Bank Name</label>
+                            <input type="text" id="bankName" name="bankName" required placeholder="Done Bank">
+                        </div>
+                        <div>
+                            <label for="accountName">Account Name</label>
+                            <input type="text" id="accountName" name="accountName" required placeholder="John Doe">
+                        </div>
+                        <div>
+                            <label for="accountNumber">Account Number</label>
+                            <input type="text" id="accountNumber" name="accountNumber" required placeholder="1234567890">
+                        </div>
+                        <div>
+                            <label for="amountSent">Amount Sent</label>
+                            <input type="text" id="amountSent" name="amountSent" required placeholder="₦1500">
+                        </div>
+                        <div>
+                            <label for="transactionDate">Transaction Date</label>
+                            <input type="date" id="transactionDate" name="transactionDate" required>
+                        </div>
+                        <div>
+                            <label for="transactionTime">Transaction Time</label>
+                            <input type="time" id="transactionTime" name="transactionTime" required>
+                        </div>
+                    </div>
+                </section>
+    
+                <button type="submit">Confirm Purchase</button>
+            </form>
+        </div>
+    </main>
+
+    <section id="newsletter" class="section-p1 section-m1">
+        <div class="newstext">
+            <h4>Sign Up For Newsletters</h4>
+            <p>Get E-mail updates about our latest shop and <span>special offers.</span></p>
+        </div>
+        <form class="form" action="https://submit-form.com/xQh5bc5fo" method="post">
+            <input type="text" name="email" placeholder="Your email address" required>
+            <button class="normal" type="submit">Sign Up</button>
+        </form>
+    </section>
+    
+    <footer class="section-p1">
+        <div class="col">
+            <img class="logo" src="img/logo1.png" alt="Edith's World Landscape Logo">
+            <h4>Contact</h4>
+            <p><strong>Address:</strong> 7 Olorunisola street, Mushin Market, Lagos, Nigeria</p>
+            <p><strong>Phone:</strong> <a href="https://wa.me/+2348037906641" class="link">08037906641</a></p>
+            <p><strong>Hours:</strong> 08:00 - 20:00. Mon - Sat</p>
+            <div class="follow">
+                <h4>Follow Us</h4>
+                <div class="icon">
+                    <a href="https://www.facebook.com/profile.php?id=100091634023999&mibextid=ZbWKwL">
+                        <img src="img/fb.svg" alt="Facebook Page Icon">
+                    </a>
+                    <a href="https://www.facebook.com/profile.php?id=61562935919298&mibextid=ZbWKwL">
+                        <img src="img/fb.svg" alt="Facebook Page Icon">
+                    </a>
+                    <a href="https://www.instagram.com/unique_quality.perfumery1212?igsh=MnhheWJtZWMwdjBi">
+                        <img src="img/it.svg" alt="Instagram Icon">
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <h4>Shop</h4>
+            <a href="perfumes.html">Perfumes</a>
+            <a href="healthcare.html">Healthcare</a>
+            <a href="clothes.html">Clothes</a>
+            <a href="shoes.html">Shoes</a>
+            <a href="contact.html">Contact Us</a>
+        </div>
+        <div class="col">
+            <h4>Commnunity</h4>
+            <a href="https://www.facebook.com/profile.php?id=100091634023999&mibextid=ZbWKwL">Perfume Page</a>
+            <a href="https://www.facebook.com/profile.php?id=61562935919298&mibextid=ZbWKwL">Clothes Page</a>
+            <a href="https://chat.whatsapp.com/LdeGqw7hKcX8o4kTsRX0Z2">Perfume Group</a>
+            <a href="https://chat.whatsapp.com/BwMUFrqKMdg5NwULuShPTe">Clothes Group</a>
+            <a href="https://chat.whatsapp.com/KjdcWhLzmEz2msfB8RqZMI">Health Group</a>
+        </div>
+        <div class="col install">
+            <h4>Install App</h4>
+            <p>Available for Direct Download</p>
+            <div class="row">
+                <a href="http://www.appcreator24.com/app3349698-p3wqki"><img src="img/pay/download.png" alt="Download Button for Mobile App"></a>
+            </div>
+            <p>Simple & Secure Payments</p>
+        </div>
+        <div class="copyright">
+            <p>© 2024 Edith's World</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

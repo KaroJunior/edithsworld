@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Edith's World</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/x-icon" href="img/favicon.png">
+    <!-- Basic Meta Tags for SEO -->
+    <meta name="description" content="Reach out to Edith’s World for any inquiries, support, or feedback on our perfumes, healthcare products, fashion, and lifestyle offerings." />
+    <meta name="keywords" content="Edith’s World contact, customer support, product inquiries, perfume questions, healthcare support, fashion assistance, lifestyle consultation" />
+    <meta name="author" content="Edith’s World" />
+
+    <!-- Open Graph Tags for Social Media Sharing -->
+    <meta property="og:title" content="Contact Edith’s World – We’re Here to Help!" />
+    <meta property="og:description" content="Have questions or need support? Connect with Edith’s World for assistance on all things perfumes, healthcare, fashion, and more." />
+    <meta property="og:image" content="img/slogo.png" />
+    <meta property="og:url" content="https://edithsworld.ng/contact" />
+    <meta property="og:type" content="website" />
+
+    <!-- Twitter Card Tags for Enhanced Sharing on Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Get in Touch with Edith’s World – Support for Perfume, Healthcare, and More" />
+    <meta name="twitter:description" content="Contact Edith’s World for any inquiries, product support, or feedback. We’re here to help with all your fashion, healthcare, and lifestyle needs." />
+    <meta name="twitter:image" content="[img/slogo.png" /> 
+</head>
+<body>
+    <section id="header">
+        <a href="#"><img src="img/logo.png" class="logo" alt="Edith's World Landscape Logo"></a>
+
+        <div>
+            <ul id="navbar">
+                <li><a href="index.html">Home</a></li>
+                <li>
+                    <a href="#" id="shopmv"><span>Shop <span class="small-arrow">▼</span></span></a>
+                    <ul class="submenu">
+                        <li><a href="perfumes.html">Perfumes</a></li>
+                        <li><a href="healthcare.html">Healthcare</a></li>
+                        <li><a href="clothes.html">Clothes</a></li>
+                        <li><a href="shoes.html">Shoes</a></li>
+                    </ul>
+                </li>
+                <li><a href="blog.html" id="blogmv">Blog</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a class="active" href="contact.html">Contact</a></li>
+                <li>
+                    <div class="cart-btn" id="lg-bag">
+                        <button onclick="toggleCart()">
+                            <img src="img/cart.svg" alt="CartIcon">
+                            <span id="cart-count-lg" class="hidden">0</span>
+                        </button>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div id="mobile">
+            <div class="cart-btn">
+                <button onclick="toggleCart()">
+                    <img src="img/cart.svg" alt="CartIcon">
+                    <span id="cart-count-mobile" class="hidden">0</span>
+                </button>
+            </div>
+            <div class="menu-icon" onclick="toggleMenu()">&#9776;</div> <!-- Hamburger menu icon -->
+        </div>
+    </section>
+
+    <div id="cartModal" class="cart-modal">
+        <div class="cart-modal-content">
+            <span class="close" onclick="closeCart()">&times;</span>
+            <h2>Your Cart</h2>
+            <div id="cartItems"></div>
+            <div id="cartTotal"></div>
+            <button class="checkout-btn" onclick="checkout()">Checkout</button>
+        </div>
+    </div>
+
+    <section id="page-header" class="contact-header">
+        <h2>Help</h2>
+        <p>Get assistance with your inquiry.</p>
+    </section>
+
+    <section id="contact-details" class="section-p1">
+        <div class="details">
+            <span>GET IN TOUCH</span>
+            <h2>Contact Us or Visit Our Location</h2>
+            <div>
+                <li>
+                    <img src="img/map.svg" alt="">
+                    <p>7 Olorunisola street, Mushin Market, Lagos, Nigeria</p>
+                </li>
+                <li>
+                    <img src="img/mail.svg" alt="">
+                    <a href="mailto:edithsworldofficial@gmail.com" class="link"><p>edithsworldofficial@gmail.com</p></a>
+                </li>
+                <li>
+                    <img src="img/phone.svg" alt="">
+                    <a href="https://wa.me/+2348037906641" class="link"><p>+234 803 790 6641</p></a>
+                </li>
+                <li>
+                    <img src="img/clock.svg" alt="">
+                    <p>Monday to Saturday: 6:00 AM to 8:00 PM</p>
+                </li>
+            </div>
+        </div>
+
+        <div class="map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3963.9441422253312!2d3.3497969746303506!3d6.5287393934639155!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103b8dcc394be483%3A0x72bfcd3684956f03!2sMushin%20Main%20Market!5e0!3m2!1sen!2sng!4v1729740562071!5m2!1sen!2sng" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </section>
+
+    <section id="form-details">
+        <form action="https://submit-form.com/NXcwcHheb" method="post">
+            <span>LEAVE A MESSAGE</span>
+            <h2>We Love to Hear from You</h2>
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Email" required>
+            <input type="text" name="subject" placeholder="Subject" required>
+            <textarea name="message" cols="30" rows="10" placeholder="Your Message" required></textarea>
+            <button class="normal" type="submit">Submit</button>
+        </form>
+    </section>
+
+    <section id="newsletter" class="section-p1 section-m1">
+        <div class="newstext">
+            <h4>Sign Up For Newsletters</h4>
+            <p>Get E-mail updates about our latest shop and <span>special offers.</span></p>
+        </div>
+        <form class="form" action="https://submit-form.com/xQh5bc5fo" method="post">
+            <input type="text" name="email" placeholder="Your email address" required>
+            <button class="normal" type="submit">Sign Up</button>
+        </form>
+    </section>
+
+    <footer class="section-p1">
+        <div class="col">
+            <img class="logo" src="img/logo1.png" alt="Edith's World Landscape Logo">
+            <h4>Contact</h4>
+            <p><strong>Address:</strong> 7 Olorunisola street, Mushin Market, Lagos, Nigeria</p>
+            <p><strong>Phone:</strong> <a href="https://wa.me/+2348037906641" class="link">08037906641</a></p>
+            <p><strong>Hours:</strong> 08:00 - 20:00. Mon - Sat</p>
+            <div class="follow">
+                <h4>Follow Us</h4>
+                <div class="icon">
+                    <a href="https://www.facebook.com/profile.php?id=100091634023999&mibextid=ZbWKwL">
+                        <img src="img/fb.svg" alt="Facebook Page Icon">
+                    </a>
+                    <a href="https://www.facebook.com/profile.php?id=61562935919298&mibextid=ZbWKwL">
+                        <img src="img/fb.svg" alt="Facebook Page Icon">
+                    </a>
+                    <a href="https://www.instagram.com/unique_quality.perfumery1212?igsh=MnhheWJtZWMwdjBi">
+                        <img src="img/it.svg" alt="Instagram Icon">
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <h4>Shop</h4>
+            <a href="perfumes.html">Perfumes</a>
+            <a href="healthcare.html">Healthcare</a>
+            <a href="clothes.html">Clothes</a>
+            <a href="shoes.html">Shoes</a>
+            <a href="contact.html">Contact Us</a>
+        </div>
+        <div class="col">
+            <h4>Commnunity</h4>
+            <a href="https://www.facebook.com/profile.php?id=100091634023999&mibextid=ZbWKwL">Perfume Page</a>
+            <a href="https://www.facebook.com/profile.php?id=61562935919298&mibextid=ZbWKwL">Clothes Page</a>
+            <a href="https://chat.whatsapp.com/LdeGqw7hKcX8o4kTsRX0Z2">Perfume Group</a>
+            <a href="https://chat.whatsapp.com/BwMUFrqKMdg5NwULuShPTe">Clothes Group</a>
+            <a href="https://chat.whatsapp.com/KjdcWhLzmEz2msfB8RqZMI">Health Group</a>
+        </div>
+        <div class="col install">
+            <h4>Install App</h4>
+            <p>Available for Direct Download</p>
+            <div class="row">
+                <a href="http://www.appcreator24.com/app3349698-p3wqki"><img src="img/pay/download.png" alt="Download Button for Mobile App"></a>
+            </div>
+            <p>Simple & Secure Payments</p>
+        </div>
+        <div class="copyright">
+            <p>© 2024 Edith's World</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
