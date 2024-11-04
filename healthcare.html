@@ -1,0 +1,1219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Healthcare - Edith's World</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/x-icon" href="img/favicon.png">
+    <!-- Basic Meta Tags for SEO -->
+    <meta name="description" content="Discover Edith's World’s range of premium healthcare products, from wellness essentials to natural remedies. Your health journey starts here!" />
+    <meta name="keywords" content="Edith’s World healthcare products, wellness essentials, health supplements, natural remedies, health and wellness, premium healthcare" />
+    <meta name="author" content="Edith’s World" />
+
+    <!-- Open Graph Tags for Social Media Sharing -->
+    <meta property="og:title" content="Quality Healthcare Products – Edith’s World Wellness Essentials" />
+    <meta property="og:description" content="Explore Edith’s World’s healthcare collection for reliable health products, wellness essentials, and natural remedies to support your wellbeing." />
+    <meta property="og:image" content="img/slogo.png" /> 
+    <meta property="og:url" content="https://edithsworld.ng/healthcare" />
+    <meta property="og:type" content="website" />
+
+    <!-- Twitter Card Tags for Enhanced Sharing on Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Shop Premium Healthcare Products – Edith’s World" />
+    <meta name="twitter:description" content="Find top-quality healthcare products and natural wellness solutions at Edith’s World. Your health journey begins with us!" />
+    <meta name="twitter:image" content="img/slogo.png" />
+</head>
+<body>
+    <section id="header">
+        <a href="#"><img src="img/logo.png" class="logo" alt="Edith's World Landscape Logo"></a>
+        <div>
+            <ul id="navbar">
+                <li><a href="index.html">Home</a></li>
+                <li>
+                    <a href="#" class="active" id="shopmv"><span>Shop <span class="small-arrow">▼</span></span></a>
+                    <ul class="submenu">
+                        <li><a href="perfumes.html">Perfumes</a></li>
+                        <li><a class="active" href="healthcare.html">Healthcare</a></li>
+                        <li><a href="clothes.html">Clothes</a></li>
+                        <li><a href="shoes.html">Shoes</a></li>
+                    </ul>
+                </li>
+                <li><a href="blog.html" id="blogmv">Blog</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li>
+                    <div class="cart-btn" id="lg-bag">
+                        <button onclick="toggleCart()">
+                            <img src="img/cart.svg" alt="CartIcon">
+                            <span id="cart-count-lg" class="hidden">0</span>
+                        </button>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div id="mobile">
+            <div class="cart-btn">
+                <button onclick="toggleCart()">
+                    <img src="img/cart.svg" alt="CartIcon">
+                    <span id="cart-count-mobile" class="hidden">0</span>
+                </button>
+            </div>
+            <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
+        </div>
+    </section>
+
+    <div id="cartModal" class="cart-modal">
+        <div class="cart-modal-content">
+            <span class="close" onclick="closeCart()">&times;</span>
+            <h2>Your Cart</h2>
+            <div id="cartItems"></div>
+            <div id="cartTotal"></div>
+            <button class="checkout-btn" onclick="checkout()">Checkout</button>
+        </div>
+    </div>
+
+    <section id="page-header" class="health">
+        <h2>Healthcare</h2>
+        <p>Your wellness is our top priority. Shop trusted healthcare essentials.</p>
+    </section>
+
+    <section id="product1" class="section-p1">
+        <div class="pro-container">
+            <div class="pro">
+                <img src="img/health/h1.jpg" alt="Norland Energy Health Necklace Product Image">
+                <div class="des">
+                    <span>healthcare</span>
+                    <h5>Norland Energy Health Necklace</h5>
+                    <div class="star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                    </div>
+                    <h4>₦77000</h4>
+                </div>
+                <button onclick="addToCart('Norland Energy Health Necklace (healthcare)', 77000)" class="addtocart-button">
+                    <div class="cartbtn">
+                        <img src="img/cart.svg" alt="Cart">
+                    </div>
+                </button>
+            </div>
+            <div class="pro">
+                <img src="img/health/h2.jpg" alt="Manpower Coffee Product Image">
+                <div class="des">
+                    <span>healthcare</span>
+                    <h5>Manpower Coffee</h5>
+                    <div class="star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                    </div>
+                    <h4>₦42000</h4>
+                </div>
+                <button onclick="addToCart('Manpower Coffee (healthcare)', 42000)" class="addtocart-button">
+                    <div class="cartbtn">
+                        <img src="img/cart.svg" alt="Cart">
+                    </div>
+                </button>
+            </div>
+            <div class="pro">
+                <img src="img/health/h3.jpg" alt="Norland Micro Molecule Peptide Product Image">
+                <div class="des">
+                    <span>healthcare</span>
+                    <h5>Norland Micro Molecule Peptide</h5>
+                    <div class="star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                    </div>
+                    <h4>₦38700</h4>
+                </div>
+                <button onclick="addToCart('Norland Micro Molecule Peptide (healthcare)', 38700)" class="addtocart-button">
+                    <div class="cartbtn">
+                        <img src="img/cart.svg" alt="Cart">
+                    </div>
+                </button>
+            </div>
+            <div class="pro">
+                <img src="img/health/h4.jpg" alt="Anti Aging and Skin Glow Pills Product Image">
+                <div class="des">
+                    <span>healthcare</span>
+                    <h5>Anti Aging and Skin Glow Pills</h5>
+                    <div class="star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                    </div>
+                    <h4>₦56500</h4>
+                </div>
+                <button onclick="addToCart('Anti Aging and Skin Glow Pills (healthcare)', 56500)" class="addtocart-button">
+                    <div class="cartbtn">
+                        <img src="img/cart.svg" alt="Cart">
+                    </div>
+                </button>
+            </div>
+            <div class="pro">
+                <img src="img/health/h5.jpg" alt="Calcium Iron and Zinc Product Image">
+                <div class="des">
+                    <span>healthcare</span>
+                    <h5>Calcium Iron and Zinc</h5>
+                    <div class="star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                    </div>
+                    <h4>₦26750</h4>
+                </div>
+                <button onclick="addToCart('Calcium Iron and Zinc (healthcare)', 26750)" class="addtocart-button">
+                    <div class="cartbtn">
+                        <img src="img/cart.svg" alt="Cart">
+                    </div>
+                </button>
+            </div>
+            <div class="pro">
+                <img src="img/health/h6.jpg" alt="Natural anti Aging Pills Product Image">
+                <div class="des">
+                    <span>healthcare</span>
+                    <h5>Natural anti Aging Pills</h5>
+                    <div class="star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                    </div>
+                    <h4>₦23800</h4>
+                </div>
+                <button onclick="addToCart('Natural anti Aging Pills (healthcare)', 23800)" class="addtocart-button">
+                    <div class="cartbtn">
+                        <img src="img/cart.svg" alt="Cart">
+                    </div>
+                </button>
+            </div>
+            <div class="pro">
+                <img src="img/health/h7.jpg" alt="Natural Anti Aging Pills Product Image">
+                <div class="des">
+                    <span>healthcare</span>
+                    <h5>Natural Anti Aging Pills</h5>
+                    <div class="star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                    </div>
+                    <h4>₦23800</h4>
+                </div>
+                <button onclick="addToCart('Natural Anti Aging Pills (healthcare)', 23800)" class="addtocart-button">
+                    <div class="cartbtn">
+                        <img src="img/cart.svg" alt="Cart">
+                    </div>
+                </button>
+            </div>
+            <div class="pro">
+                <img src="img/health/h8.jpg" alt="Immune Vital for Men Product Image">
+                <div class="des">
+                    <span>healthcare</span>
+                    <h5>Immune Vital for Men</h5>
+                    <div class="star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                    </div>
+                    <h4>₦31750</h4>
+                </div>
+                <button onclick="addToCart('Immune Vital for Men (healthcare)', 31750)" class="addtocart-button">
+                    <div class="cartbtn">
+                        <img src="img/cart.svg" alt="Cart">
+                    </div>
+                </button>
+            </div>
+            <div class="pro">
+                <img src="img/health/h9.jpg" alt="Immune Plus for Female Product Image">
+                <div class="des">
+                    <span>healthcare</span>
+                    <h5>Immune Plus for Female</h5>
+                    <div class="star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                    </div>
+                    <h4>₦24100</h4>
+                </div>
+                <button onclick="addToCart('Immune Vital for Men (healthcare)', 24100)" class="addtocart-button">
+                    <div class="cartbtn">
+                        <img src="img/cart.svg" alt="Cart">
+                    </div>
+                </button>
+            </div>
+            <div class="pro">
+                <img src="img/health/h10.jpg" alt="Natural B Carotene Product Image">
+                <div class="des">
+                    <span>healthcare</span>
+                    <h5>Natural B Carotene</h5>
+                    <div class="star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                    </div>
+                    <h4>₦23000</h4>
+                    <p class="resell-price">Per Bottle of 60 Pieces</p>
+                </div>
+                <button onclick="addToCart('Natural B Carotene (healthcare)', 23000)" class="addtocart-button">
+                    <div class="cartbtn">
+                        <img src="img/cart.svg" alt="Cart">
+                    </div>
+                </button>
+            </div>
+            <div class="pro">
+                <img src="img/health/h11.jpg" alt="Health Way Vision Capsule Product Image">
+                <div class="des">
+                    <span>healthcare</span>
+                    <h5>Health Way Vision Capsule</h5>
+                    <div class="star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                    </div>
+                    <h4>₦32000</h4>
+                    <p class="resell-price">Per Bottle of 60 Capsules</p>
+                </div>
+                <button onclick="addToCart('Health Way Vision Capsule (healthcare)', 32000)" class="addtocart-button">
+                    <div class="cartbtn">
+                        <img src="img/cart.svg" alt="Cart">
+                    </div>
+                </button>
+            </div>
+            <div class="pro">
+                <img src="img/health/h12.jpg" alt="Green Spirulina Capsules Product Image">
+                <div class="des">
+                    <span>healthcare</span>
+                    <h5>Green Spirulina Capsules</h5>
+                    <div class="star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                    </div>
+                    <h4>₦16000</h4>
+                    <p class="resell-price">Per Bottle of 60 Capsules</p>
+                </div>
+                <button onclick="addToCart('Green Spirulina Capsules (healthcare)', 16000)" class="addtocart-button">
+                    <div class="cartbtn">
+                        <img src="img/cart.svg" alt="Cart">
+                    </div>
+                </button>
+            </div>
+            <div class="pro">
+                <img src="img/health/h13.jpg" alt="Health Way Cup Product Image">
+                <div class="des">
+                    <span>healthcare</span>
+                    <h5>Health Way Cup</h5>
+                    <div class="star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                    </div>
+                    <h4>₦58000</h4>
+                </div>
+                <button onclick="addToCart('Health Way Cup (healthcare)', 58000)" class="addtocart-button">
+                    <div class="cartbtn">
+                        <img src="img/cart.svg" alt="Cart">
+                    </div>
+                </button>
+            </div>
+            <div class="pro">
+                <img src="img/health/h14.jpg" alt="Norland Manpower Combo Blast Product Image">
+                <div class="des">
+                    <span>healthcare</span>
+                    <h5>Norland Manpower Combo Blast</h5>
+                    <div class="star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                    </div>
+                    <h4>₦72000</h4>
+                </div>
+                <button onclick="addToCart('Norland Manpower Combo Blast (healthcare)', 72000)" class="addtocart-button">
+                    <div class="cartbtn">
+                        <img src="img/cart.svg" alt="Cart">
+                    </div>
+                </button>
+            </div>
+            <div class="pro">
+                <img src="img/health/h15.jpg" alt="Norland Natural B Carotene Product Image">
+                <div class="des">
+                    <span>healthcare</span>
+                    <h5>Norland Natural B Carotene</h5>
+                    <div class="star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                    </div>
+                    <h4>₦23000</h4>
+                </div>
+                <button onclick="addToCart('Norland Natural B Carotene (healthcare)', 23000)" class="addtocart-button">
+                    <div class="cartbtn">
+                        <img src="img/cart.svg" alt="Cart">
+                    </div>
+                </button>
+            </div>
+            <div class="pro">
+                <img src="img/health/h16.jpg" alt="Health Way Calcium Powder Product Image">
+                <div class="des">
+                    <span>healthcare</span>
+                    <h5>Health Way Calcium Powder</h5>
+                    <div class="star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                    </div>
+                    <h4>₦21000</h4>
+                </div>
+                <button onclick="addToCart('Health Way Calcium Powder (healthcare)', 21000)" class="addtocart-button">
+                    <div class="cartbtn">
+                        <img src="img/cart.svg" alt="Cart">
+                    </div>
+                </button>
+            </div>
+            <div class="pro">
+                <img src="img/health/h17.jpg" alt="Norland Health Way Detox Pack Product Image">
+                <div class="des">
+                    <span>healthcare</span>
+                    <h5>Norland Health Way Detox Pack</h5>
+                    <div class="star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                    </div>
+                    <h4>₦520000</h4>
+                </div>
+                <button onclick="addToCart('Norland Health Way Detox Pack (healthcare)', 520000)" class="addtocart-button">
+                    <div class="cartbtn">
+                        <img src="img/cart.svg" alt="Cart">
+                    </div>
+                </button>
+            </div>
+            <div class="pro">
+                <img src="img/health/h18.jpg" alt="Infertility Treatment Pack Product Image">
+                <div class="des">
+                    <span>healthcare</span>
+                    <h5>Infertility Treatment Pack</h5>
+                    <div class="star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                    </div>
+                    <h4>₦124000</h4>
+                </div>
+                <button onclick="addToCart('Infertility Treatment Pack (healthcare)', 124000)" class="addtocart-button">
+                    <div class="cartbtn">
+                        <img src="img/cart.svg" alt="Cart">
+                    </div>
+                </button>
+            </div>
+            <div class="pro">
+                <img src="img/health/h19.jpg" alt="Ginseng Cordyceps Sinensis Product Image">
+                <div class="des">
+                    <span>healthcare</span>
+                    <h5>Ginseng Cordyceps Sinensis</h5>
+                    <div class="star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                    </div>
+                    <h4>₦26750</h4>
+                </div>
+                <button onclick="addToCart('Ginseng Cordyceps Sinensis (healthcare)', 26750)" class="addtocart-button">
+                    <div class="cartbtn">
+                        <img src="img/cart.svg" alt="Cart">
+                    </div>
+                </button>
+            </div>
+            <div class="pro">
+                <img src="img/health/h20.jpg" alt="Male Health Pad Product Image">
+                <div class="des">
+                    <span>healthcare</span>
+                    <h5>Male Health Pad</h5>
+                    <div class="star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                    </div>
+                    <h4>₦32000</h4>
+                    <p class="resell-price">Per Box of 14 Pieces</p>
+                </div>
+                <button onclick="addToCart('Male Health Pad (healthcare)', 32000)" class="addtocart-button">
+                    <div class="cartbtn">
+                        <img src="img/cart.svg" alt="Cart">
+                    </div>
+                </button>
+            </div>
+            <div class="pro">
+                <img src="img/health/h21.jpg" alt="Female Health Pad Product Image">
+                <div class="des">
+                    <span>healthcare</span>
+                    <h5>Female Health Pad</h5>
+                    <div class="star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                    </div>
+                    <h4>₦32000</h4>
+                    <p class="resell-price">Per Box of 14 Pieces</p>
+                </div>
+                <button onclick="addToCart('Female Health Pad (healthcare)', 32000)" class="addtocart-button">
+                    <div class="cartbtn">
+                        <img src="img/cart.svg" alt="Cart">
+                    </div>
+                </button>
+            </div>
+            <div class="pro">
+                <img src="img/health/h22.jpg" alt="Cordyceps Coffee Product Image">
+                <div class="des">
+                    <span>healthcare</span>
+                    <h5>Cordyceps Coffee</h5>
+                    <div class="star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                    </div>
+                    <h4>₦15000</h4>
+                </div>
+                <button onclick="addToCart('Cordyceps Coffee (healthcare)', 15000)" class="addtocart-button">
+                    <div class="cartbtn">
+                        <img src="img/cart.svg" alt="Cart">
+                    </div>
+                </button>
+            </div>
+            <div class="pro">
+                <img src="img/health/h23.jpg" alt="Full Treatment Pack for any kind of Infection in both Male and Female Product Image">
+                <div class="des">
+                    <span>healthcare</span>
+                    <h5>Full Treatment Pack for any kind of Infection in both Male and Female</h5>
+                    <div class="star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                    </div>
+                    <h4>₦86500</h4>
+                </div>
+                <button onclick="addToCart('Full Treatment Pack for any kind of Infection in both Male and Female (healthcare)', 86500)" class="addtocart-button">
+                    <div class="cartbtn">
+                        <img src="img/cart.svg" alt="Cart">
+                    </div>
+                </button>
+            </div>
+            <div class="pro">
+                <img src="img/health/h24.jpg" alt="Magic Pan with cover Product Image">
+                <div class="des">
+                    <span>healthcare</span>
+                    <h5>Magic Pan with cover</h5>
+                    <div class="star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                    </div>
+                    <h4>₦110000</h4>
+                </div>
+                <button onclick="addToCart('Magic Pan with cover (healthcare)', 110000)" class="addtocart-button">
+                    <div class="cartbtn">
+                        <img src="img/cart.svg" alt="Cart">
+                    </div>
+                </button>
+            </div>
+            <div class="pro">
+                <img src="img/health/h25.jpg" alt="Norland Herbal Toothpaste Product Image">
+                <div class="des">
+                    <span>healthcare</span>
+                    <h5>Norland Herbal Toothpaste</h5>
+                    <div class="star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                    </div>
+                    <h4>₦5000</h4>
+                </div>
+                <button onclick="addToCart('Norland Herbal Toothpaste (healthcare)', 5000)" class="addtocart-button">
+                    <div class="cartbtn">
+                        <img src="img/cart.svg" alt="Cart">
+                    </div>
+                </button>
+            </div>
+            <div class="pro">
+                <img src="img/health/h26.jpg" alt="Energy Bracelet Product Image">
+                <div class="des">
+                    <span>healthcare</span>
+                    <h5>Energy Bracelet</h5>
+                    <div class="star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                    </div>
+                    <h4>₦60000</h4>
+                </div>
+                <button onclick="addToCart('Energy Bracelet (healthcare)', 60000)" class="addtocart-button">
+                    <div class="cartbtn">
+                        <img src="img/cart.svg" alt="Cart">
+                    </div>
+                </button>
+            </div>
+            <div class="pro">
+                <img src="img/health/h27.jpg" alt="Norland Sunlight Refreshing Roll On Product Image">
+                <div class="des">
+                    <span>healthcare</span>
+                    <h5>Norland Sunlight Refreshing Roll On</h5>
+                    <div class="star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                    </div>
+                    <h4>₦5000</h4>
+                </div>
+                <button onclick="addToCart('Norland Sunlight Refreshing Roll On (healthcare)', 5000)" class="addtocart-button">
+                    <div class="cartbtn">
+                        <img src="img/cart.svg" alt="Cart">
+                    </div>
+                </button>
+            </div>
+            <div class="pro">
+                <img src="img/health/h28.jpg" alt="Wellness Man and Woman Pack Product Image">
+                <div class="des">
+                    <span>healthcare</span>
+                    <h5>Wellness Man and Woman Pack</h5>
+                    <div class="star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                    </div>
+                    <h4>₦60000</h4>
+                </div>
+                <button onclick="addToCart('Wellness Man and Woman Pack (healthcare)', 60000)" class="addtocart-button">
+                    <div class="cartbtn">
+                        <img src="img/cart.svg" alt="Cart">
+                    </div>
+                </button>
+            </div>
+            <div class="pro">
+                <img src="img/health/h29.jpg" alt="Feminelle Intimate Wash Product Image">
+                <div class="des">
+                    <span>healthcare</span>
+                    <h5>Feminelle Intimate Wash</h5>
+                    <div class="star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                    </div>
+                    <h4>₦12000</h4>
+                    <p class="resell-price">Per Bottle</p>
+                </div>
+                <button onclick="addToCart('Feminelle Intimate Wash (healthcare)', 12000)" class="addtocart-button">
+                    <div class="cartbtn">
+                        <img src="img/cart.svg" alt="Cart">
+                    </div>
+                </button>
+            </div>
+            <div class="pro">
+                <img src="img/health/h30.jpg" alt="Feminelle Intimate Wash Product Image">
+                <div class="des">
+                    <span>healthcare</span>
+                    <h5>Feminelle Intimate Wash</h5>
+                    <div class="star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                    </div>
+                    <h4>₦12000</h4>
+                    <p class="resell-price">Per Bottle</p>
+                </div>
+                <button onclick="addToCart('Feminelle Intimate Wash (healthcare)', 12000)" class="addtocart-button">
+                    <div class="cartbtn">
+                        <img src="img/cart.svg" alt="Cart">
+                    </div>
+                </button>
+            </div>
+            <div class="pro">
+                <img src="img/health/h31.jpg" alt="Health Way Kuding Tea Product Image">
+                <div class="des">
+                    <span>healthcare</span>
+                    <h5>Health Way Kuding Tea</h5>
+                    <div class="star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                    </div>
+                    <h4>₦9500</h4>
+                </div>
+                <button onclick="addToCart('Health Way Kuding Tea (healthcare)', 9500)" class="addtocart-button">
+                    <div class="cartbtn">
+                        <img src="img/cart.svg" alt="Cart">
+                    </div>
+                </button>
+            </div>
+            <div class="pro">
+                <img src="img/health/h32.jpg" alt="Hepatitis Solution Pack Product Image">
+                <div class="des">
+                    <span>healthcare</span>
+                    <h5>Hepatitis Solution Pack</h5>
+                    <div class="star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                    </div>
+                    <h4>₦94000</h4>
+                </div>
+                <button onclick="addToCart('Hepatitis Solution Pack (healthcare)', 94000)" class="addtocart-button">
+                    <div class="cartbtn">
+                        <img src="img/cart.svg" alt="Cart">
+                    </div>
+                </button>
+            </div>
+            <div class="pro">
+                <img src="img/health/h33.jpg" alt="GI VITAL Capsules Product Image">
+                <div class="des">
+                    <span>healthcare</span>
+                    <h5>GI VITAL Capsules</h5>
+                    <div class="star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                    </div>
+                    <h4>₦35300</h4>
+                </div>
+                <button onclick="addToCart('GI VITAL Capsules (healthcare)', 35300)" class="addtocart-button">
+                    <div class="cartbtn">
+                        <img src="img/cart.svg" alt="Cart">
+                    </div>
+                </button>
+            </div>
+            <div class="pro">
+                <img src="img/health/h34.jpg" alt="Norland Micro Molecule Peptide Product Image">
+                <div class="des">
+                    <span>healthcare</span>
+                    <h5>Norland Micro Molecule Peptide</h5>
+                    <div class="star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                    </div>
+                    <h4>₦40000</h4>
+                </div>
+                <button onclick="addToCart('Norland Micro Molecule Peptide (healthcare)', 40000)" class="addtocart-button">
+                    <div class="cartbtn">
+                        <img src="img/cart.svg" alt="Cart">
+                    </div>
+                </button>
+            </div>
+            <div class="pro">
+                <img src="img/health/h35.jpg" alt="GI VITAL Capsules Product Image">
+                <div class="des">
+                    <span>healthcare</span>
+                    <h5>GI VITAL Capsules</h5>
+                    <div class="star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                    </div>
+                    <h4>₦35300</h4>
+                </div>
+                <button onclick="addToCart('GI VITAL Capsules (healthcare)', 35300)" class="addtocart-button">
+                    <div class="cartbtn">
+                        <img src="img/cart.svg" alt="Cart">
+                    </div>
+                </button>
+            </div>
+            <div class="pro">
+                <img src="img/health/h36.jpg" alt="Norland Propolis Lecithin Product Image">
+                <div class="des">
+                    <span>healthcare</span>
+                    <h5>Norland Propolis Lecithin</h5>
+                    <div class="star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                    </div>
+                    <h4>₦23000</h4>
+                </div>
+                <button onclick="addToCart('Norland Propolis Lecithin (healthcare)', 23000)" class="addtocart-button">
+                    <div class="cartbtn">
+                        <img src="img/cart.svg" alt="Cart">
+                    </div>
+                </button>
+            </div>
+            <div class="pro">
+                <img src="img/health/h37.jpg" alt="Anion Sanitary Napkins for Menstruation Product Image">
+                <div class="des">
+                    <span>healthcare</span>
+                    <h5>Anion Sanitary Napkins for Menstruation</h5>
+                    <div class="star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                    </div>
+                    <h4>₦5000</h4>
+                </div>
+                <button onclick="addToCart('Anion Sanitary Napkins for Menstruation (healthcare)', 5000)" class="addtocart-button">
+                    <div class="cartbtn">
+                        <img src="img/cart.svg" alt="Cart">
+                    </div>
+                </button>
+            </div>
+            <div class="pro">
+                <img src="img/health/h38.jpg" alt="Norland Health Way Capsules for Cure of Diabetes Product Image">
+                <div class="des">
+                    <span>healthcare</span>
+                    <h5>Norland Health Way Capsules for Cure of Diabetes</h5>
+                    <div class="star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                    </div>
+                    <h4>₦32000</h4>
+                </div>
+                <button onclick="addToCart('Norland Health Way Capsules for Cure of Diabetes (healthcare)', 32000)" class="addtocart-button">
+                    <div class="cartbtn">
+                        <img src="img/cart.svg" alt="Cart">
+                    </div>
+                </button>
+            </div>
+            <div class="pro">
+                <img src="img/health/h39.jpg" alt="Anion Pantyliner for Daily Care Product Image">
+                <div class="des">
+                    <span>healthcare</span>
+                    <h5>Anion Pantyliner for Daily Care</h5>
+                    <div class="star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                    </div>
+                    <h4>₦5000</h4>
+                </div>
+                <button onclick="addToCart('Anion Pantyliner for Daily Care (healthcare)', 5000)" class="addtocart-button">
+                    <div class="cartbtn">
+                        <img src="img/cart.svg" alt="Cart">
+                    </div>
+                </button>
+            </div>
+            <div class="pro">
+                <img src="img/health/h40.jpg" alt="Anion Sanitary Napkin for Monthly Flow Product Image">
+                <div class="des">
+                    <span>healthcare</span>
+                    <h5>Anion Sanitary Napkin for Monthly Flow</h5>
+                    <div class="star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                    </div>
+                    <h4>₦5000</h4>
+                </div>
+                <button onclick="addToCart('Anion Sanitary Napkin for Monthly Flow (healthcare)', 5000)" class="addtocart-button">
+                    <div class="cartbtn">
+                        <img src="img/cart.svg" alt="Cart">
+                    </div>
+                </button>
+            </div>
+            <div class="pro">
+                <img src="img/health/h41.jpg" alt="Magic Herbal Female Treatment Pad Product Image">
+                <div class="des">
+                    <span>healthcare</span>
+                    <h5>Magic Herbal Female Treatment Pad</h5>
+                    <div class="star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                    </div>
+                    <h4>₦33000</h4>
+                </div>
+                <button onclick="addToCart('Magic Herbal Female Treatment Pad (healthcare)', 33000)" class="addtocart-button">
+                    <div class="cartbtn">
+                        <img src="img/cart.svg" alt="Cart">
+                    </div>
+                </button>
+            </div>
+            <div class="pro">
+                <img src="img/health/h42.jpg" alt="Immune + Capsules Product Image">
+                <div class="des">
+                    <span>healthcare</span>
+                    <h5>Immune + Capsules</h5>
+                    <div class="star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                    </div>
+                    <h4>₦23000</h4>
+                </div>
+                <button onclick="addToCart('Immune + Capsules (healthcare)', 23000)" class="addtocart-button">
+                    <div class="cartbtn">
+                        <img src="img/cart.svg" alt="Cart">
+                    </div>
+                </button>
+            </div>
+            <div class="pro">
+                <img src="img/health/h43.jpg" alt="Strong Sex Drive for Men Product Image">
+                <div class="des">
+                    <span>healthcare</span>
+                    <h5>Strong Sex Drive for Men</h5>
+                    <div class="star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                    </div>
+                    <h4>₦53000</h4>
+                </div>
+                <button onclick="addToCart('Strong Sex Drive for Men (healthcare)', 53000)" class="addtocart-button">
+                    <div class="cartbtn">
+                        <img src="img/cart.svg" alt="Cart">
+                    </div>
+                </button>
+            </div>
+            <div class="pro">
+                <img src="img/health/h44.jpg" alt="Health Way Calcium Powder Product Image">
+                <div class="des">
+                    <span>healthcare</span>
+                    <h5>Health Way Calcium Powder</h5>
+                    <div class="star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                    </div>
+                    <h4>₦21000</h4>
+                </div>
+                <button onclick="addToCart('Health Way Calcium Powder (healthcare)', 21000)" class="addtocart-button">
+                    <div class="cartbtn">
+                        <img src="img/cart.svg" alt="Cart">
+                    </div>
+                </button>
+            </div>
+            <div class="pro">
+                <img src="img/health/h45.jpg" alt="he Best Supplements for Ladies to look younger than their original age Product Image">
+                <div class="des">
+                    <span>healthcare</span>
+                    <h5>The Best Supplements for Ladies to look younger than their original age</h5>
+                    <div class="star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                    </div>
+                    <h4>₦115000</h4>
+                </div>
+                <button onclick="addToCart('The Best Supplements for Ladies to look younger than their original age (healthcare)', 115000)" class="addtocart-button">
+                    <div class="cartbtn">
+                        <img src="img/cart.svg" alt="Cart">
+                    </div>
+                </button>
+            </div>
+            <div class="pro">
+                <img src="img/health/h46.jpg" alt="Immune + Capsules for boosting Immune System Product Image">
+                <div class="des">
+                    <span>healthcare</span>
+                    <h5>Immune + Capsules for boosting Immune System</h5>
+                    <div class="star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                    </div>
+                    <h4>₦23000</h4>
+                </div>
+                <button onclick="addToCart('Immune + Capsules for boosting Immune System (healthcare)', 23000)" class="addtocart-button">
+                    <div class="cartbtn">
+                        <img src="img/cart.svg" alt="Cart">
+                    </div>
+                </button>
+            </div>
+            <div class="pro">
+                <img src="img/health/h47.jpg" alt="Norland Propolis Lecithin Capsules for HBP and Bone Disease Product Image">
+                <div class="des">
+                    <span>healthcare</span>
+                    <h5>Norland Propolis Lecithin Capsules for HBP and Bone Disease</h5>
+                    <div class="star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                    </div>
+                    <h4>₦23000</h4>
+                </div>
+                <button onclick="addToCart('Norland Propolis Lecithin Capsules for HBP and Bone Disease (healthcare)', 23000)" class="addtocart-button">
+                    <div class="cartbtn">
+                        <img src="img/cart.svg" alt="Cart">
+                    </div>
+                </button>
+            </div>
+            <div class="pro">
+                <img src="img/health/h48.jpg" alt="Combo for 3Hs; HBP, High Cholesterol and High Sugar Product Image">
+                <div class="des">
+                    <span>healthcare</span>
+                    <h5>Combo for 3Hs; HBP, High Cholesterol and High Sugar</h5>
+                    <div class="star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                    </div>
+                    <h4>₦55000</h4>
+                </div>
+                <button onclick="addToCart('Combo for 3Hs; HBP, High Cholesterol and High Sugar (healthcare)', 55000)" class="addtocart-button">
+                    <div class="cartbtn">
+                        <img src="img/cart.svg" alt="Cart">
+                    </div>
+                </button>
+            </div>
+            <div class="pro">
+                <img src="img/health/h49.jpg" alt="Pantyline for all Ladies daily care Product Image">
+                <div class="des">
+                    <span>healthcare</span>
+                    <h5>Pantyline for all Ladies daily care</h5>
+                    <div class="star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                    </div>
+                    <h4>₦5000</h4>
+                </div>
+                <button onclick="addToCart('Pantyline for all Ladies daily care (healthcare)', 5000)" class="addtocart-button">
+                    <div class="cartbtn">
+                        <img src="img/cart.svg" alt="Cart">
+                    </div>
+                </button>
+            </div>
+            <div class="pro">
+                <img src="img/health/h50.jpg" alt="Blood Sugar Regulation Combo Product Image">
+                <div class="des">
+                    <span>healthcare</span>
+                    <h5>Blood Sugar Regulation Combo</h5>
+                    <div class="star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                    </div>
+                    <h4>₦60000</h4>
+                </div>
+                <button onclick="addToCart('Blood Sugar Regulation Combo (healthcare)', 60000)" class="addtocart-button">
+                    <div class="cartbtn">
+                        <img src="img/cart.svg" alt="Cart">
+                    </div>
+                </button>
+            </div>
+            <div class="pro">
+                <img src="img/health/h51.jpg" alt="Health Way Cordyceps Coffee Product Image">
+                <div class="des">
+                    <span>healthcare</span>
+                    <h5>Health Way Cordyceps Coffee</h5>
+                    <div class="star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                    </div>
+                    <h4>₦15000</h4>
+                </div>
+                <button onclick="addToCart('Health Way Cordyceps Coffee (healthcare)', 15000)" class="addtocart-button">
+                    <div class="cartbtn">
+                        <img src="img/cart.svg" alt="Cart">
+                    </div>
+                </button>
+            </div>
+            <div class="pro">
+                <img src="img/health/h52.jpg" alt="Anti Aging and Skin Glow Pills Product Image">
+                <div class="des">
+                    <span>healthcare</span>
+                    <h5>Anti Aging and Skin Glow Pills</h5>
+                    <div class="star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                    </div>
+                    <h4>₦56500</h4>
+                </div>
+                <button onclick="addToCart('Anti Aging and Skin Glow Pills (healthcare)', 56500)" class="addtocart-button">
+                    <div class="cartbtn">
+                        <img src="img/cart.svg" alt="Cart">
+                    </div>
+                </button>
+            </div>
+            <div class="pro">
+                <img src="img/health/h53.jpg" alt="Propolis Lecithin Capsules Product Image">
+                <div class="des">
+                    <span>healthcare</span>
+                    <h5>Propolis Lecithin Capsules</h5>
+                    <div class="star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                    </div>
+                    <h4>₦23000</h4>
+                </div>
+                <button onclick="addToCart('Propolis Lecithin Capsules (healthcare)', 23000)" class="addtocart-button">
+                    <div class="cartbtn">
+                        <img src="img/cart.svg" alt="Cart">
+                    </div>
+                </button>
+            </div>
+        </div>
+    </section>
+    
+
+    <section id="newsletter" class="section-p1 section-m1">
+        <div class="newstext">
+            <h4>Sign Up For Newsletters</h4>
+            <p>Get E-mail updates about our latest shop and <span>special offers.</span></p>
+        </div>
+        <form class="form" action="https://submit-form.com/xQh5bc5fo" method="post">
+            <input type="text" name="email" placeholder="Your email address" required>
+            <button class="normal" type="submit">Sign Up</button>
+        </form>
+    </section>
+
+    <footer class="section-p1">
+        <div class="col">
+            <img class="logo" src="img/logo1.png" alt="Edith's World Landscape Logo">
+            <h4>Contact</h4>
+            <p><strong>Address:</strong> 7 Olorunisola street, Mushin Market, Lagos, Nigeria</p>
+            <p><strong>Phone:</strong> <a href="https://wa.me/+2348037906641" class="link">08037906641</a></p>
+            <p><strong>Hours:</strong> 08:00 - 20:00. Mon - Sat</p>
+            <div class="follow">
+                <h4>Follow Us</h4>
+                <div class="icon">
+                    <a href="https://www.facebook.com/profile.php?id=100091634023999&mibextid=ZbWKwL">
+                        <img src="img/fb.svg" alt="Facebook Page Icon">
+                    </a>
+                    <a href="https://www.facebook.com/profile.php?id=61562935919298&mibextid=ZbWKwL">
+                        <img src="img/fb.svg" alt="Facebook Page Icon">
+                    </a>
+                    <a href="https://www.instagram.com/unique_quality.perfumery1212?igsh=MnhheWJtZWMwdjBi">
+                        <img src="img/it.svg" alt="Instagram Icon">
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <h4>Shop</h4>
+            <a href="perfumes.html">Perfumes</a>
+            <a href="healthcare.html">Healthcare</a>
+            <a href="clothes.html">Clothes</a>
+            <a href="shoes.html">Shoes</a>
+            <a href="contact.html">Contact Us</a>
+        </div>
+        <div class="col">
+            <h4>Commnunity</h4>
+            <a href="https://www.facebook.com/profile.php?id=100091634023999&mibextid=ZbWKwL">Perfume Page</a>
+            <a href="https://www.facebook.com/profile.php?id=61562935919298&mibextid=ZbWKwL">Clothes Page</a>
+            <a href="https://chat.whatsapp.com/LdeGqw7hKcX8o4kTsRX0Z2">Perfume Group</a>
+            <a href="https://chat.whatsapp.com/BwMUFrqKMdg5NwULuShPTe">Clothes Group</a>
+            <a href="https://chat.whatsapp.com/KjdcWhLzmEz2msfB8RqZMI">Health Group</a>
+        </div>
+        <div class="col install">
+            <h4>Install App</h4>
+            <p>Available for Direct Download</p>
+            <div class="row">
+                <a href="http://www.appcreator24.com/app3349698-p3wqki"><img src="img/pay/download.png" alt="Download Button for Mobile App"></a>
+            </div>
+            <p>Simple & Secure Payments</p>
+        </div>
+        <div class="copyright">
+            <p>© 2024 Edith's World</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

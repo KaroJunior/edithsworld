@@ -1,0 +1,1659 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shoes - Edith's World</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/x-icon" href="img/favicon.png">
+    <!-- Basic Meta Tags for SEO -->
+    <meta name="description" content="Step into style with Edith's World’s exclusive collection of shoes for every occasion. Discover quality footwear combining comfort and fashion." />
+    <meta name="keywords" content="Edith's World shoes, quality footwear, stylish shoes, comfortable shoes, trendy shoes, premium shoes, women's shoes, men's shoes, casual shoes, formal shoes" />
+    <meta name="author" content="Edith’s World" />
+
+    <!-- Open Graph Tags for Social Media Sharing -->
+    <meta property="og:title" content="Exclusive Shoes Collection – Edith's World Footwear" />
+    <meta property="og:description" content="Explore Edith’s World’s range of stylish and comfortable shoes. Find your perfect fit for any occasion!" />
+    <meta property="og:image" content="img/slogo.png" /> 
+    <meta property="og:url" content="https://edithsworld.ng/shoes" />
+    <meta property="og:type" content="website" />
+
+    <!-- Twitter Card Tags for Enhanced Sharing on Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Discover Stylish Shoes – Edith's World Footwear Collection" />
+    <meta name="twitter:description" content="Find the perfect balance of comfort and style with Edith’s World shoes. Shop for any occasion!" />
+    <meta name="twitter:image" content="img/slogo.png" /> 
+</head>
+<body>
+    <section id="header">
+        <a href="#"><img src="img/logo.png" class="logo" alt="Edith's World Landscape Logo"></a>
+        <div>
+            <ul id="navbar">
+                <li><a href="index.html">Home</a></li>
+                <li>
+                    <a href="#" class="active" id="shopmv"><span>Shop <span class="small-arrow">▼</span></span></a>
+                    <ul class="submenu">
+                        <li><a href="perfumes.html">Perfumes</a></li>
+                        <li><a href="healthcare.html">Healthcare</a></li>
+                        <li><a href="clothes.html">Clothes</a></li>
+                        <li><a class="active" href="shoes.html">Shoes</a></li>
+                    </ul>
+                </li>
+                <li><a href="blog.html" id="blogmv">Blog</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li>
+                    <div class="cart-btn" id="lg-bag">
+                        <button onclick="toggleCart()">
+                            <img src="img/cart.svg" alt="CartIcon">
+                            <span id="cart-count-lg" class="hidden">0</span>
+                        </button>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div id="mobile">
+            <div class="cart-btn">
+                <button onclick="toggleCart()">
+                    <img src="img/cart.svg" alt="CartIcon">
+                    <span id="cart-count-mobile" class="hidden">0</span>
+                </button>
+            </div>
+            <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
+        </div>
+    </section>
+
+    <div id="cartModal" class="cart-modal">
+        <div class="cart-modal-content">
+            <span class="close" onclick="closeCart()">&times;</span>
+            <h2>Your Cart</h2>
+            <div id="cartItems"></div>
+            <div id="cartTotal"></div>
+            <button class="checkout-btn" onclick="checkout()">Checkout</button>
+        </div>
+    </div>
+
+    <section id="page-header" class="shoe">
+        <h2>Shoes</h2>
+        <p>Step up your style with our exclusive shoe collection.</p>
+    </section>
+
+    <section id="product1" class="section-p1">
+        <div class="pro-container">
+            <div class="pro">
+                <img src="img/shoes/s1.jpg" alt="Nike Air Product Image">
+                <div class="des">
+                    <span>shoes</span>
+                    <h5>Nike Air</h5>
+                    <div class="star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                    </div>
+                    <h4>₦29000</h4>
+                    <p class="resell-price">Sizes 41-46</p>
+                    <p class="dozen-price">Top Quality</p>
+                </div>
+                <button onclick="addToCart('Nike Air (shoes)', 29000)" class="addtocart-button">
+                    <div class="cartbtn">
+                        <img src="img/cart.svg" alt="Cart">
+                    </div>
+                </button>
+            </div>
+            <div class="pro">
+                <img src="img/shoes/s2.jpg" alt="Givenchy Kids Sandals Product Image">
+                <div class="des">
+                    <span>shoes</span>
+                    <h5>Givenchy Kids Sandals</h5>
+                    <div class="star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                    </div>
+                    <h4>₦13000</h4>
+                    <p class="resell-price">Sizes 25-42</p>
+                </div>
+                <button onclick="addToCart('Givenchy Kids Sandals (shoes)', 13000)" class="addtocart-button">
+                    <div class="cartbtn">
+                        <img src="img/cart.svg" alt="Cart">
+                    </div>
+                </button>
+            </div>
+            <div class="pro">
+                <img src="img/shoes/s3.jpg" alt="Corporate Shoe 1 Product Image">
+                <div class="des">
+                    <span>shoes</span>
+                    <h5>Corporate Shoe 1</h5>
+                    <div class="star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                    </div>
+                    <h4>₦29000</h4>
+                    <p class="resell-price">Sizes 40-46</p>
+                </div>
+                <button onclick="addToCart('Corporate Shoe 1 (shoes)', 29000)" class="addtocart-button">
+                    <div class="cartbtn">
+                        <img src="img/cart.svg" alt="Cart">
+                    </div>
+                </button>
+            </div>
+            <div class="pro">
+                <img src="img/shoes/s4.jpg" alt="Corporate Shoe 2 Product Image">
+                <div class="des">
+                    <span>shoes</span>
+                    <h5>Corporate Shoe 2</h5>
+                    <div class="star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                    </div>
+                    <h4>₦29000</h4>
+                    <p class="resell-price">Sizes 40-46</p>
+                </div>
+                <button onclick="addToCart('Corporate Shoe 2 (shoes)', 29000)" class="addtocart-button">
+                    <div class="cartbtn">
+                        <img src="img/cart.svg" alt="Cart">
+                    </div>
+                </button>
+            </div>
+            <div class="pro">
+                <img src="img/shoes/s5.jpg" alt="Corporate Shoe 3 Product Image">
+                <div class="des">
+                    <span>shoes</span>
+                    <h5>Corporate Shoe 3</h5>
+                    <div class="star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                    </div>
+                    <h4>₦29000</h4>
+                    <p class="resell-price">Sizes 40-46</p>
+                </div>
+                <button onclick="addToCart('Corporate Shoe 3 (shoes)', 29000)" class="addtocart-button">
+                    <div class="cartbtn">
+                        <img src="img/cart.svg" alt="Cart">
+                    </div>
+                </button>
+            </div>
+            <div class="pro">
+                <img src="img/shoes/s6.jpg" alt="Corporate Cut Shoe 1 Product Image">
+                <div class="des">
+                    <span>shoes</span>
+                    <h5>Corporate Cut Shoe 1</h5>
+                    <div class="star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                    </div>
+                    <h4>₦29000</h4>
+                    <p class="resell-price">Sizes 40-46</p>
+                </div>
+                <button onclick="addToCart('Corporate Cut Shoe 1 (shoes)', 29000)" class="addtocart-button">
+                    <div class="cartbtn">
+                        <img src="img/cart.svg" alt="Cart">
+                    </div>
+                </button>
+            </div>
+            <div class="pro">
+                <img src="img/shoes/s7.jpg" alt="Corporate Cut Shoe 2 Product Image">
+                <div class="des">
+                    <span>shoes</span>
+                    <h5>Corporate Cut Shoe 2</h5>
+                    <div class="star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                    </div>
+                    <h4>₦29000</h4>
+                    <p class="resell-price">Sizes 40-46</p>
+                </div>
+                <button onclick="addToCart('Corporate Cut Shoe 2 (shoes)', 29000)" class="addtocart-button">
+                    <div class="cartbtn">
+                        <img src="img/cart.svg" alt="Cart">
+                    </div>
+                </button>
+            </div>
+            <div class="pro">
+                <img src="img/shoes/s8.jpg" alt="White Sneakers Product Image">
+                <div class="des">
+                    <span>shoes</span>
+                    <h5>White Sneakers</h5>
+                    <div class="star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                    </div>
+                    <h4>₦18000</h4>
+                    <p class="resell-price">Sizes 38-42</p>
+                </div>
+                <button onclick="addToCart('White Sneakers (shoes)', 18000)" class="addtocart-button">
+                    <div class="cartbtn">
+                        <img src="img/cart.svg" alt="Cart">
+                    </div>
+                </button>
+            </div>
+            <div class="pro">
+                <img src="img/shoes/s9.jpg" alt="Pink Sneakers Product Image">
+                <div class="des">
+                    <span>shoes</span>
+                    <h5>Pink Sneakers</h5>
+                    <div class="star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                    </div>
+                    <h4>₦17000</h4>
+                    <p class="resell-price">Sizes 38-40</p>
+                </div>
+                <button onclick="addToCart('Pink Sneakers (shoes)', 17000)" class="addtocart-button">
+                    <div class="cartbtn">
+                        <img src="img/cart.svg" alt="Cart">
+                    </div>
+                </button>
+            </div>
+            <div class="pro">
+                <img src="img/shoes/s10.jpg" alt="Ocly Fashion 11K Product Image">
+                <div class="des">
+                    <span>shoes</span>
+                    <h5>Ocly Fashion 11K</h5>
+                    <div class="star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                    </div>
+                    <h4>₦11000</h4>
+                    <p class="resell-price">Sizes 19-30</p>
+                </div>
+                <button onclick="addToCart('Ocly Fashion 11K (shoes)', 11000)" class="addtocart-button">
+                    <div class="cartbtn">
+                        <img src="img/cart.svg" alt="Cart">
+                    </div>
+                </button>
+            </div>
+            <div class="pro">
+                <img src="img/shoes/s10.jpg" alt="Ocly Fashion 11.5K Product Image">
+                <div class="des">
+                    <span>shoes</span>
+                    <h5>Ocly Fashion 11.5K</h5>
+                    <div class="star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                    </div>
+                    <h4>₦11500</h4>
+                    <p class="resell-price">Sizes 31-36</p>
+                </div>
+                <button onclick="addToCart('Ocly Fashion 11.5K (shoes)', 11500)" class="addtocart-button">
+                    <div class="cartbtn">
+                        <img src="img/cart.svg" alt="Cart">
+                    </div>
+                </button>
+            </div>
+            <div class="pro">
+                <img src="img/shoes/s11.jpg" alt="Abu Sneakers Product Image">
+                <div class="des">
+                    <span>shoes</span>
+                    <h5>Abu Sneakers</h5>
+                    <div class="star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                    </div>
+                    <h4>₦22000</h4>
+                    <p class="resell-price">Comes with box</p>
+                </div>
+                <button onclick="addToCart('Abu Sneakers (shoes)', 22000)" class="addtocart-button">
+                    <div class="cartbtn">
+                        <img src="img/cart.svg" alt="Cart">
+                    </div>
+                </button>
+            </div>
+            <div class="pro">
+                <img src="img/shoes/s12.jpg" alt="Nike Sneakers Product Image">
+                <div class="des">
+                    <span>shoes</span>
+                    <h5>Nike Sneakers</h5>
+                    <div class="star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                    </div>
+                    <h4>₦17500</h4>
+                    <p class="resell-price">Sizes 42-46</p>
+                </div>
+                <button onclick="addToCart('Nike Sneakers (shoes)', 17500)" class="addtocart-button">
+                    <div class="cartbtn">
+                        <img src="img/cart.svg" alt="Cart">
+                    </div>
+                </button>
+            </div>
+            <div class="pro">
+                <img src="img/shoes/s13.jpg" alt="Nike Air 2 Product Image">
+                <div class="des">
+                    <span>shoes</span>
+                    <h5>Nike Air 2</h5>
+                    <div class="star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                    </div>
+                    <h4>₦17500</h4>
+                    <p class="resell-price">Sizes 42-46</p>
+                </div>
+                <button onclick="addToCart('Nike Air 2 (shoes)', 17500)" class="addtocart-button">
+                    <div class="cartbtn">
+                        <img src="img/cart.svg" alt="Cart">
+                    </div>
+                </button>
+            </div>
+            <div class="pro">
+                <img src="img/shoes/s14.jpg" alt="Pink Sandals Product Image">
+                <div class="des">
+                    <span>shoes</span>
+                    <h5>Pink Sandals</h5>
+                    <div class="star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                    </div>
+                    <h4>₦17000</h4>
+                    <p class="resell-price">Sizes 38-43</p>
+                </div>
+                <button onclick="addToCart('Pink Sandals (shoes)', 17000)" class="addtocart-button">
+                    <div class="cartbtn">
+                        <img src="img/cart.svg" alt="Cart">
+                    </div>
+                </button>
+            </div>
+            <div class="pro">
+                <img src="img/shoes/s15.jpg" alt="White Sandals Product Image">
+                <div class="des">
+                    <span>shoes</span>
+                    <h5>White Sandals</h5>
+                    <div class="star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                    </div>
+                    <h4>₦17000</h4>
+                    <p class="resell-price">Sizes 38-43</p>
+                </div>
+                <button onclick="addToCart('White Sandals (shoes)', 17000)" class="addtocart-button">
+                    <div class="cartbtn">
+                        <img src="img/cart.svg" alt="Cart">
+                    </div>
+                </button>
+            </div>
+            <div class="pro">
+                <img src="img/shoes/s16.jpg" alt="Black Sandals Product Image">
+                <div class="des">
+                    <span>shoes</span>
+                    <h5>Black Sandals</h5>
+                    <div class="star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                    </div>
+                    <h4>₦17000</h4>
+                    <p class="resell-price">Sizes 38-43</p>
+                </div>
+                <button onclick="addToCart('Black Sandals (shoes)', 17000)" class="addtocart-button">
+                    <div class="cartbtn">
+                        <img src="img/cart.svg" alt="Cart">
+                    </div>
+                </button>
+            </div>
+            <div class="pro">
+                <img src="img/shoes/s17.jpg" alt="Nike 1 Sneakers Product Image">
+                <div class="des">
+                    <span>shoes</span>
+                    <h5>Nike 1 Sneakers</h5>
+                    <div class="star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                    </div>
+                    <h4>₦12000</h4>
+                    <p class="resell-price">Sizes 37-42</p>
+                </div>
+                <button onclick="addToCart('Nike 1 Sneakers (shoes)', 12000)" class="addtocart-button">
+                    <div class="cartbtn">
+                        <img src="img/cart.svg" alt="Cart">
+                    </div>
+                </button>
+            </div>
+            <div class="pro">
+                <img src="img/shoes/s18.jpg" alt="Nike 2 Sneakers Product Image">
+                <div class="des">
+                    <span>shoes</span>
+                    <h5>Nike 2 Sneakers</h5>
+                    <div class="star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                    </div>
+                    <h4>₦12000</h4>
+                    <p class="resell-price">Sizes 37-42</p>
+                </div>
+                <button onclick="addToCart('Nike 2 Sneakers (shoes)', 12000)" class="addtocart-button">
+                    <div class="cartbtn">
+                        <img src="img/cart.svg" alt="Cart">
+                    </div>
+                </button>
+            </div>
+            <div class="pro">
+                <img src="img/shoes/s19.jpg" alt="Kids Min Shoe 1 Product Image">
+                <div class="des">
+                    <span>shoes</span>
+                    <h5>Kids Min Shoe 1</h5>
+                    <div class="star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                    </div>
+                    <h4>₦18500</h4>
+                    <p class="resell-price">Sizes 21-25</p>
+                </div>
+                <button onclick="addToCart('Kids Min Shoe 1 (shoes)', 18500)" class="addtocart-button">
+                    <div class="cartbtn">
+                        <img src="img/cart.svg" alt="Cart">
+                    </div>
+                </button>
+            </div>
+            <div class="pro">
+                <img src="img/shoes/s19.jpg" alt="Kids Min Shoe 2 Product Image">
+                <div class="des">
+                    <span>shoes</span>
+                    <h5>Kids Min Shoe 2</h5>
+                    <div class="star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                    </div>
+                    <h4>₦20000</h4>
+                    <p class="resell-price">Sizes 26-30</p>
+                </div>
+                <button onclick="addToCart('Kids Min Shoe 2 (shoes)', 20000)" class="addtocart-button">
+                    <div class="cartbtn">
+                        <img src="img/cart.svg" alt="Cart">
+                    </div>
+                </button>
+            </div>
+            <div class="pro">
+                <img src="img/shoes/s19.jpg" alt="Kids Min Shoe 3 Product Image">
+                <div class="des">
+                    <span>shoes</span>
+                    <h5>Kids Min Shoe 3</h5>
+                    <div class="star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                    </div>
+                    <h4>₦19500</h4>
+                    <p class="resell-price">Sizes 31-36</p>
+                </div>
+                <button onclick="addToCart('Kids Min Shoe 3 (shoes)', 19500)" class="addtocart-button">
+                    <div class="cartbtn">
+                        <img src="img/cart.svg" alt="Cart">
+                    </div>
+                </button>
+            </div>
+            <div class="pro">
+                <img src="img/shoes/s20.jpg" alt="Fashion Sneakers Product Image">
+                <div class="des">
+                    <span>shoes</span>
+                    <h5>Fashion Sneakers</h5>
+                    <div class="star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                    </div>
+                    <h4>₦10500</h4>
+                    <p class="resell-price">Sizes 38-41</p>
+                </div>
+                <button onclick="addToCart('Fashion Sneakers (shoes)', 10500)" class="addtocart-button">
+                    <div class="cartbtn">
+                        <img src="img/cart.svg" alt="Cart">
+                    </div>
+                </button>
+            </div>
+            <div class="pro">
+                <img src="img/shoes/s21.jpg" alt="Girls Half Shoe Sandals Product Image">
+                <div class="des">
+                    <span>shoes</span>
+                    <h5>Girls Half Shoe Sandals</h5>
+                    <div class="star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                    </div>
+                    <h4>₦12000</h4>
+                    <p class="resell-price">Sizes 25-30</p>
+                </div>
+                <button onclick="addToCart('Girls Half Shoe Sandals (shoes)', 12000)" class="addtocart-button">
+                    <div class="cartbtn">
+                        <img src="img/cart.svg" alt="Cart">
+                    </div>
+                </button>
+            </div>
+            <div class="pro">
+                <img src="img/shoes/s22.jpg" alt="N Canvas Product Image">
+                <div class="des">
+                    <span>shoes</span>
+                    <h5>N Canvas</h5>
+                    <div class="star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                    </div>
+                    <h4>₦27000</h4>
+                    <p class="resell-price">Sizes 39-42</p>
+                </div>
+                <button onclick="addToCart('N Canvas (shoes)', 27000)" class="addtocart-button">
+                    <div class="cartbtn">
+                        <img src="img/cart.svg" alt="Cart">
+                    </div>
+                </button>
+            </div>
+            <div class="pro">
+                <img src="img/shoes/s23.jpg" alt="Kids Hi-Way Sandals Product Image">
+                <div class="des">
+                    <span>shoes</span>
+                    <h5>Kids Hi-Way Sandals</h5>
+                    <div class="star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                    </div>
+                    <h4>₦5800</h4>
+                    <p class="resell-price">Black:. 31, 33, 34, 35, 36</p>
+                    <p class="resell-price">Gold:. 31, 34, 35</p>
+                    <p class="resell-price">Black:. 31, 32, 34, 35</p>
+                    <p class="resell-price">Black:. 31, 32, 33, 34, 35</p>
+                </div>
+                <button onclick="addToCart('Kids Hi-Way Sandals (shoes)', 5800)" class="addtocart-button">
+                    <div class="cartbtn">
+                        <img src="img/cart.svg" alt="Cart">
+                    </div>
+                </button>
+            </div>
+            <div class="pro">
+                <img src="img/shoes/s24.jpg" alt="Ladies High Wedge Black Sandals Product Image">
+                <div class="des">
+                    <span>shoes</span>
+                    <h5>Ladies High Wedge Black Sandals</h5>
+                    <div class="star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                    </div>
+                    <h4>₦21500</h4>
+                    <p class="resell-price">Sizes 38-43</p>
+                </div>
+                <button onclick="addToCart('Ladies High Wedge Black Sandals (shoes)', 21500)" class="addtocart-button">
+                    <div class="cartbtn">
+                        <img src="img/cart.svg" alt="Cart">
+                    </div>
+                </button>
+            </div>
+            <div class="pro">
+                <img src="img/shoes/s25.jpg" alt="Ladies High Wedge Silver Sandals Product Image">
+                <div class="des">
+                    <span>shoes</span>
+                    <h5>Ladies High Wedge Silver Sandals</h5>
+                    <div class="star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                    </div>
+                    <h4>₦21500</h4>
+                    <p class="resell-price">Sizes 38-43</p>
+                </div>
+                <button onclick="addToCart('Ladies High Wedge Silver Sandals (shoes)', 21500)" class="addtocart-button">
+                    <div class="cartbtn">
+                        <img src="img/cart.svg" alt="Cart">
+                    </div>
+                </button>
+            </div>
+            <div class="pro">
+                <img src="img/shoes/s26.jpg" alt="Bamboo Wedge Product Image">
+                <div class="des">
+                    <span>shoes</span>
+                    <h5>Bamboo Wedge</h5>
+                    <div class="star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                    </div>
+                    <h4>₦19500</h4>
+                    <p class="resell-price">Sizes 37-43</p>
+                    <p class="resell-price">With a Branded Box</p>
+                </div>
+                <button onclick="addToCart('Bamboo Wedge (shoes)', 19500)" class="addtocart-button">
+                    <div class="cartbtn">
+                        <img src="img/cart.svg" alt="Cart">
+                    </div>
+                </button>
+            </div>
+            <div class="pro">
+                <img src="img/shoes/s27.jpg" alt="Original Pink Melissa Slide Product Image">
+                <div class="des">
+                    <span>shoes</span>
+                    <h5>Original Pink Melissa Slide</h5>
+                    <div class="star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                    </div>
+                    <h4>₦29000</h4>
+                    <p class="resell-price">Sizes 37-40</p>
+                    <p class="resell-price">With a Branded Box</p>
+                </div>
+                <button onclick="addToCart('Original Pink Melissa Slide (shoes)', 29000)" class="addtocart-button">
+                    <div class="cartbtn">
+                        <img src="img/cart.svg" alt="Cart">
+                    </div>
+                </button>
+            </div>
+            <div class="pro">
+                <img src="img/shoes/s28.jpg" alt="Original Black Melissa Slide Product Image">
+                <div class="des">
+                    <span>shoes</span>
+                    <h5>Original Black Melissa Slide</h5>
+                    <div class="star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                    </div>
+                    <h4>₦29000</h4>
+                    <p class="resell-price">Sizes 37-40</p>
+                    <p class="resell-price">With a Branded Box</p>
+                </div>
+                <button onclick="addToCart('Original Black Melissa Slide (shoes)', 29000)" class="addtocart-button">
+                    <div class="cartbtn">
+                        <img src="img/cart.svg" alt="Cart">
+                    </div>
+                </button>
+            </div>
+            <div class="pro">
+                <img src="img/shoes/s29.jpg" alt="Wedge Product Image">
+                <div class="des">
+                    <span>shoes</span>
+                    <h5>Wedge</h5>
+                    <div class="star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                    </div>
+                    <h4>₦18500</h4>
+                    <p class="resell-price">Also available in Black, White and Onion Colours</p>
+                    <p class="resell-price">Sizes 37-40</p>
+                </div>
+                <button onclick="addToCart('Wedge (shoes)', 18500)" class="addtocart-button">
+                    <div class="cartbtn">
+                        <img src="img/cart.svg" alt="Cart">
+                    </div>
+                </button>
+            </div>
+            <div class="pro">
+                <img src="img/shoes/s30.jpg" alt="Wedge Mixed Colours 1 Product Image">
+                <div class="des">
+                    <span>shoes</span>
+                    <h5>Wedge Mixed Colours 1</h5>
+                    <div class="star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                    </div>
+                    <h4>₦19500</h4>
+                </div>
+                <button onclick="addToCart('Wedge Mixed Colours 1 (shoes)', 19500)" class="addtocart-button">
+                    <div class="cartbtn">
+                        <img src="img/cart.svg" alt="Cart">
+                    </div>
+                </button>
+            </div>
+            <div class="pro">
+                <img src="img/shoes/s31.jpg" alt="Wedge Mixed Colours 2 Product Image">
+                <div class="des">
+                    <span>shoes</span>
+                    <h5>Wedge Mixed Colours 2</h5>
+                    <div class="star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                    </div>
+                    <h4>₦19500</h4>
+                </div>
+                <button onclick="addToCart('Wedge Mixed Colours 2 (shoes)', 19500)" class="addtocart-button">
+                    <div class="cartbtn">
+                        <img src="img/cart.svg" alt="Cart">
+                    </div>
+                </button>
+            </div>
+            <div class="pro">
+                <img src="img/shoes/s32.jpg" alt="Wedge Mixed Colours 3 Product Image">
+                <div class="des">
+                    <span>shoes</span>
+                    <h5>Wedge Mixed Colours 3</h5>
+                    <div class="star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                    </div>
+                    <h4>₦19500</h4>
+                </div>
+                <button onclick="addToCart('Wedge Mixed Colours 3 (shoes)', 19500)" class="addtocart-button">
+                    <div class="cartbtn">
+                        <img src="img/cart.svg" alt="Cart">
+                    </div>
+                </button>
+            </div>
+            <div class="pro">
+                <img src="img/shoes/s33.jpg" alt="Quality Men Palm Product Image">
+                <div class="des">
+                    <span>shoes</span>
+                    <h5>Quality Men Palm</h5>
+                    <div class="star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                    </div>
+                    <h4>₦9000</h4>
+                    <p class="resell-price">Sizes 41-45</p>
+                </div>
+                <button onclick="addToCart('Quality Men Palm (shoes)', 9000)" class="addtocart-button">
+                    <div class="cartbtn">
+                        <img src="img/cart.svg" alt="Cart">
+                    </div>
+                </button>
+            </div>
+            <div class="pro">
+                <img src="img/shoes/s34.jpg" alt="Kids Fashion Canvas Product Image">
+                <div class="des">
+                    <span>shoes</span>
+                    <h5>Kids Fashion Canvas</h5>
+                    <div class="star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                    </div>
+                    <h4>₦7000</h4>
+                    <p class="resell-price">Sizes 25-30</p>
+                </div>
+                <button onclick="addToCart('Kids Fashion Canvas (shoes)', 7000)" class="addtocart-button">
+                    <div class="cartbtn">
+                        <img src="img/cart.svg" alt="Cart">
+                    </div>
+                </button>
+            </div>
+            <div class="pro">
+                <img src="img/shoes/s35.jpg" alt="Pointed Wedge Mixed Colours 1 Product Image">
+                <div class="des">
+                    <span>shoes</span>
+                    <h5>Pointed Wedge Mixed Colours 1</h5>
+                    <div class="star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                    </div>
+                    <h4>₦19500</h4>
+                </div>
+                <button onclick="addToCart('Pointed Wedge Mixed Colours 1 (shoes)', 19500)" class="addtocart-button">
+                    <div class="cartbtn">
+                        <img src="img/cart.svg" alt="Cart">
+                    </div>
+                </button>
+            </div>
+            <div class="pro">
+                <img src="img/shoes/s36.jpg" alt="Pointed Wedge Sandals Mixed Colours Product Image">
+                <div class="des">
+                    <span>shoes</span>
+                    <h5>Pointed Wedge Sandals Mixed Colours</h5>
+                    <div class="star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                    </div>
+                    <h4>₦19500</h4>
+                </div>
+                <button onclick="addToCart('Pointed Wedge Sandals Mixed Colours (shoes)', 19500)" class="addtocart-button">
+                    <div class="cartbtn">
+                        <img src="img/cart.svg" alt="Cart">
+                    </div>
+                </button>
+            </div>
+            <div class="pro">
+                <img src="img/shoes/s37.jpg" alt="Brown Boxed Sneakers Product Image">
+                <div class="des">
+                    <span>shoes</span>
+                    <h5>Brown Boxed Sneakers</h5>
+                    <div class="star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                    </div>
+                    <h4>₦27000</h4>
+                    <p class="resell-price">Sizes 41-45</p>
+                    <p class="resell-price">Comes with Box</p>
+                </div>
+                <button onclick="addToCart('Brown Boxed Sneakers (shoes)', 27000)" class="addtocart-button">
+                    <div class="cartbtn">
+                        <img src="img/cart.svg" alt="Cart">
+                    </div>
+                </button>
+            </div>
+            <div class="pro">
+                <img src="img/shoes/s38.jpg" alt="Black Boxed Sneakers Product Image">
+                <div class="des">
+                    <span>shoes</span>
+                    <h5>Black Boxed Sneakers</h5>
+                    <div class="star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                    </div>
+                    <h4>₦27000</h4>
+                    <p class="resell-price">Sizes 41-45</p>
+                    <p class="resell-price">Comes with Box</p>
+                </div>
+                <button onclick="addToCart('Black Boxed Sneakers (shoes)', 27000)" class="addtocart-button">
+                    <div class="cartbtn">
+                        <img src="img/cart.svg" alt="Cart">
+                    </div>
+                </button>
+            </div>
+            <div class="pro">
+                <img src="img/shoes/s39.jpg" alt="Ladies Pointed High Heels Gold Product Image">
+                <div class="des">
+                    <span>shoes</span>
+                    <h5>Ladies Pointed High Heels Gold</h5>
+                    <div class="star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                    </div>
+                    <h4>₦10000</h4>
+                </div>
+                <button onclick="addToCart('Ladies Pointed High Heels Gold (shoes)', 10000)" class="addtocart-button">
+                    <div class="cartbtn">
+                        <img src="img/cart.svg" alt="Cart">
+                    </div>
+                </button>
+            </div>
+            <div class="pro">
+                <img src="img/shoes/s40.jpg" alt="Ladies Pointed High Heels Black Product Image">
+                <div class="des">
+                    <span>shoes</span>
+                    <h5>Ladies Pointed High Heels Black</h5>
+                    <div class="star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                    </div>
+                    <h4>₦10000</h4>
+                </div>
+                <button onclick="addToCart('Ladies Pointed High Heels Black (shoes)', 10000)" class="addtocart-button">
+                    <div class="cartbtn">
+                        <img src="img/cart.svg" alt="Cart">
+                    </div>
+                </button>
+            </div>
+            <div class="pro">
+                <img src="img/shoes/s41.jpg" alt="Ladies Footwears 2 Product Image">
+                <div class="des">
+                    <span>shoes</span>
+                    <h5>Ladies Footwears 2</h5>
+                    <div class="star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                    </div>
+                    <h4>₦10000</h4>
+                </div>
+                <button onclick="addToCart('Ladies Footwears 2 (shoes)', 10000)" class="addtocart-button">
+                    <div class="cartbtn">
+                        <img src="img/cart.svg" alt="Cart">
+                    </div>
+                </button>
+            </div>
+            <div class="pro">
+                <img src="img/shoes/s42.jpg" alt="Ladies Footwears 1 Product Image">
+                <div class="des">
+                    <span>shoes</span>
+                    <h5>Ladies Footwears 1</h5>
+                    <div class="star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                    </div>
+                    <h4>₦10000</h4>
+                </div>
+                <button onclick="addToCart('Ladies Footwears 1 (shoes)', 10000)" class="addtocart-button">
+                    <div class="cartbtn">
+                        <img src="img/cart.svg" alt="Cart">
+                    </div>
+                </button>
+            </div>
+            <div class="pro">
+                <img src="img/shoes/s43.jpg" alt="Ladies Wedge Heels 1 Product Image">
+                <div class="des">
+                    <span>shoes</span>
+                    <h5>Ladies Wedge Heels 1</h5>
+                    <div class="star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                    </div>
+                    <h4>₦9000</h4>
+                    <p class="resell-price">Available in Gold, Black and Silver</p>
+                    <p class="resell-price">Sizes 37-42</p>
+                </div>
+                <button onclick="addToCart('Ladies Wedge Heels 1 (shoes)', 9000)" class="addtocart-button">
+                    <div class="cartbtn">
+                        <img src="img/cart.svg" alt="Cart">
+                    </div>
+                </button>
+            </div>
+            <div class="pro">
+                <img src="img/shoes/s44.jpg" alt="Ladies Wedge Mixed Colours Product Image">
+                <div class="des">
+                    <span>shoes</span>
+                    <h5>Ladies Wedge Mixed Colours</h5>
+                    <div class="star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                    </div>
+                    <h4>₦9000</h4>
+                    <p class="resell-price">Available in Gold, Black and Silver</p>
+                    <p class="resell-price">Sizes 37-42</p>
+                </div>
+                <button onclick="addToCart('Ladies Wedge Mixed Colours (shoes)', 9000)" class="addtocart-button">
+                    <div class="cartbtn">
+                        <img src="img/cart.svg" alt="Cart">
+                    </div>
+                </button>
+            </div>
+            <div class="pro">
+                <img src="img/shoes/s45.jpg" alt="Ladies Wedge Heels 2 Product Image">
+                <div class="des">
+                    <span>shoes</span>
+                    <h5>Ladies Wedge Heels 2</h5>
+                    <div class="star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                    </div>
+                    <h4>₦9000</h4>
+                    <p class="resell-price">Sizes 37-42</p>
+                </div>
+                <button onclick="addToCart('Ladies Wedge Heels 2 (shoes)', 9000)" class="addtocart-button">
+                    <div class="cartbtn">
+                        <img src="img/cart.svg" alt="Cart">
+                    </div>
+                </button>
+            </div>
+            <div class="pro">
+                <img src="img/shoes/s46.jpg" alt="Ladies Wedge Heels 3 Product Image">
+                <div class="des">
+                    <span>shoes</span>
+                    <h5>Ladies Wedge Heels 3</h5>
+                    <div class="star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                    </div>
+                    <h4>₦9000</h4>
+                    <p class="resell-price">Available in Gold, Black and Silver</p>
+                    <p class="resell-price">Sizes 37-42</p>
+                </div>
+                <button onclick="addToCart('Ladies Wedge Heels 3 (shoes)', 9000)" class="addtocart-button">
+                    <div class="cartbtn">
+                        <img src="img/cart.svg" alt="Cart">
+                    </div>
+                </button>
+            </div>
+            <div class="pro">
+                <img src="img/shoes/s47.jpg" alt="Ladies 1 Product Image">
+                <div class="des">
+                    <span>shoes</span>
+                    <h5>Ladies 1</h5>
+                    <div class="star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                    </div>
+                    <h4>₦9000</h4>
+                    <p class="resell-price">Available in Black, Gold and Silver</p>
+                    <p class="resell-price">Sizes 37-42</p>
+                </div>
+                <button onclick="addToCart('Ladies 1 (shoes)', 9000)" class="addtocart-button">
+                    <div class="cartbtn">
+                        <img src="img/cart.svg" alt="Cart">
+                    </div>
+                </button>
+            </div>
+            <div class="pro">
+                <img src="img/shoes/s48.jpg" alt="Ladies 2 Product Image">
+                <div class="des">
+                    <span>shoes</span>
+                    <h5>Ladies 2</h5>
+                    <div class="star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                    </div>
+                    <h4>₦9000</h4>
+                    <p class="resell-price">Available in Black and White</p>
+                    <p class="resell-price">Sizes 37-42</p>
+                </div>
+                <button onclick="addToCart('Ladies 2 (shoes)', 9000)" class="addtocart-button">
+                    <div class="cartbtn">
+                        <img src="img/cart.svg" alt="Cart">
+                    </div>
+                </button>
+            </div>
+            <div class="pro">
+                <img src="img/shoes/s49.jpg" alt="Ladies Cover Shoe Product Image">
+                <div class="des">
+                    <span>shoes</span>
+                    <h5>Ladies Cover Shoe</h5>
+                    <div class="star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                    </div>
+                    <h4>₦10000</h4>
+                    <p class="resell-price">Available in Black and Gold</p>
+                    <p class="resell-price">Sizes 37-43</p>
+                </div>
+                <button onclick="addToCart('Ladies Cover Shoe (shoes)', 10000)" class="addtocart-button">
+                    <div class="cartbtn">
+                        <img src="img/cart.svg" alt="Cart">
+                    </div>
+                </button>
+            </div>
+            <div class="pro">
+                <img src="img/shoes/s50.jpg" alt="Ladies Footwear 4 Product Image">
+                <div class="des">
+                    <span>shoes</span>
+                    <h5>Ladies Footwear 4</h5>
+                    <div class="star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                    </div>
+                    <h4>₦8000</h4>
+                    <p class="resell-price">Available in Black, Silver and Gold</p>
+                    <p class="resell-price">Sizes 37-43</p>
+                </div>
+                <button onclick="addToCart('Ladies Footwear 4 (shoes)', 8000)" class="addtocart-button">
+                    <div class="cartbtn">
+                        <img src="img/cart.svg" alt="Cart">
+                    </div>
+                </button>
+            </div>
+            <div class="pro">
+                <img src="img/shoes/s51.jpg" alt="Ladies Pointed High Heels Wine Colour Product Image">
+                <div class="des">
+                    <span>shoes</span>
+                    <h5>Ladies Pointed High Heels Wine Colour</h5>
+                    <div class="star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                    </div>
+                    <h4>₦10000</h4>
+                    <p class="resell-price">Sizes 37-42</p>
+                </div>
+                <button onclick="addToCart('Ladies Pointed High Heels Wine Colour (shoes)', 10000)" class="addtocart-button">
+                    <div class="cartbtn">
+                        <img src="img/cart.svg" alt="Cart">
+                    </div>
+                </button>
+            </div>
+            <div class="pro">
+                <img src="img/shoes/s52.jpg" alt="Ladies Footwear 2 Product Image">
+                <div class="des">
+                    <span>shoes</span>
+                    <h5>Ladies Footwear 2</h5>
+                    <div class="star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                    </div>
+                    <h4>₦8000</h4>
+                    <p class="resell-price">Sizes 37-43</p>
+                </div>
+                <button onclick="addToCart('Ladies Footwear 2 (shoes)', 8000)" class="addtocart-button">
+                    <div class="cartbtn">
+                        <img src="img/cart.svg" alt="Cart">
+                    </div>
+                </button>
+            </div>
+            <div class="pro">
+                <img src="img/shoes/s53.jpg" alt="Ladies Footwear 3 Product Image">
+                <div class="des">
+                    <span>shoes</span>
+                    <h5>Ladies Footwear 3</h5>
+                    <div class="star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                    </div>
+                    <h4>₦8000</h4>
+                    <p class="resell-price">Sizes 37-42</p>
+                </div>
+                <button onclick="addToCart('Ladies Footwear 3 (shoes)', 8000)" class="addtocart-button">
+                    <div class="cartbtn">
+                        <img src="img/cart.svg" alt="Cart">
+                    </div>
+                </button>
+            </div>
+            <div class="pro">
+                <img src="img/shoes/s54.jpg" alt="Ladies Wine Colour Footwear Product Image">
+                <div class="des">
+                    <span>shoes</span>
+                    <h5>Ladies Wine Colour Footwear</h5>
+                    <div class="star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                    </div>
+                    <h4>₦9000</h4>
+                    <p class="resell-price">Sizes 37-42</p>
+                </div>
+                <button onclick="addToCart('Ladies Wine Colour Footwear (shoes)', 9000)" class="addtocart-button">
+                    <div class="cartbtn">
+                        <img src="img/cart.svg" alt="Cart">
+                    </div>
+                </button>
+            </div>
+            <div class="pro">
+                <img src="img/shoes/s55.jpg" alt="Ladies Wedge Heels 2 Product Image">
+                <div class="des">
+                    <span>shoes</span>
+                    <h5>Ladies Wedge Heels 2</h5>
+                    <div class="star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                    </div>
+                    <h4>₦9000</h4>
+                    <p class="resell-price">Available in Gold, Black and Silver</p>
+                    <p class="resell-price">Sizes 37-42</p>
+                </div>
+                <button onclick="addToCart('Ladies Wedge Heels 2 (shoes)', 9000)" class="addtocart-button">
+                    <div class="cartbtn">
+                        <img src="img/cart.svg" alt="Cart">
+                    </div>
+                </button>
+            </div>
+            <div class="pro">
+                <img src="img/shoes/s56.jpg" alt="Ladies Flat Sandals Product Image">
+                <div class="des">
+                    <span>shoes</span>
+                    <h5>Ladies Flat Sandals</h5>
+                    <div class="star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                    </div>
+                    <h4>₦15000</h4>
+                    <p class="resell-price">Sizes 37-41</p>
+                    <p class="resell-price">Comes with Box</p>
+                </div>
+                <button onclick="addToCart('Ladies Flat Sandals (shoes)', 15000)" class="addtocart-button">
+                    <div class="cartbtn">
+                        <img src="img/cart.svg" alt="Cart">
+                    </div>
+                </button>
+            </div>
+            <div class="pro">
+                <img src="img/shoes/s57.jpg" alt="High Heels Sandals Product Image">
+                <div class="des">
+                    <span>shoes</span>
+                    <h5>High Heels Sandals</h5>
+                    <div class="star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                    </div>
+                    <h4>₦12000</h4>
+                    <p class="resell-price">Sizes 37-42</p>
+                </div>
+                <button onclick="addToCart('High Heels Sandals (shoes)', 12000)" class="addtocart-button">
+                    <div class="cartbtn">
+                        <img src="img/cart.svg" alt="Cart">
+                    </div>
+                </button>
+            </div>
+            <div class="pro">
+                <img src="img/shoes/s58.jpg" alt="Ladies Sandals Product Image">
+                <div class="des">
+                    <span>shoes</span>
+                    <h5>Ladies Sandals</h5>
+                    <div class="star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                    </div>
+                    <h4>₦11000</h4>
+                    <p class="resell-price">Sizes 37-42</p>
+                </div>
+                <button onclick="addToCart('Ladies Sandals (shoes)', 11000)" class="addtocart-button">
+                    <div class="cartbtn">
+                        <img src="img/cart.svg" alt="Cart">
+                    </div>
+                </button>
+            </div>
+            <div class="pro">
+                <img src="img/shoes/s59.jpg" alt="Girls Cover Shoes Product Image">
+                <div class="des">
+                    <span>shoes</span>
+                    <h5>Girls Cover Shoes</h5>
+                    <div class="star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                    </div>
+                    <h4>₦12500</h4>
+                    <p class="resell-price">Sizes 25-35</p>
+                </div>
+                <button onclick="addToCart('Girls Cover Shoes (shoes)', 12500)" class="addtocart-button">
+                    <div class="cartbtn">
+                        <img src="img/cart.svg" alt="Cart">
+                    </div>
+                </button>
+            </div>
+            <div class="pro">
+                <img src="img/shoes/s60.jpg" alt="Ladies Wedge Heels 3 Product Image">
+                <div class="des">
+                    <span>shoes</span>
+                    <h5>Ladies Wedge Heels 3</h5>
+                    <div class="star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                    </div>
+                    <h4>₦9000</h4>
+                    <p class="resell-price">Available in Gold, Black and Silver<p>
+                    <p class="resell-price">Sizes 37-42<p>
+                </div>
+                <button onclick="addToCart('Ladies Wedge Heels 3 (shoes)', 9000)" class="addtocart-button">
+                    <div class="cartbtn">
+                        <img src="img/cart.svg" alt="Cart">
+                    </div>
+                </button>
+            </div>
+            <div class="pro">
+                <img src="img/shoes/s61.jpg" alt="Ladies Wedge Heels 4 Product Image">
+                <div class="des">
+                    <span>shoes</span>
+                    <h5>Ladies Wedge Heels 4</h5>
+                    <div class="star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                    </div>
+                    <h4>₦9000</h4>
+                    <p class="resell-price">Available in Gold, Black and Silver<p>
+                    <p class="resell-price">Sizes 37-42<p>
+                </div>
+                <button onclick="addToCart('Ladies Wedge Heels 4 (shoes)', 9000)" class="addtocart-button">
+                    <div class="cartbtn">
+                        <img src="img/cart.svg" alt="Cart">
+                    </div>
+                </button>
+            </div>
+            <div class="pro">
+                <img src="img/shoes/s62.jpg" alt="Ladies Wedge Heels 3 Product Image">
+                <div class="des">
+                    <span>shoes</span>
+                    <h5>Ladies Wedge Heels 3</h5>
+                    <div class="star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                    </div>
+                    <h4>₦9000</h4>
+                    <p class="resell-price">Available in Gold, Black and Silver<p>
+                    <p class="resell-price">Sizes 37-42<p>
+                </div>
+                <button onclick="addToCart('Ladies Wedge Heels 3 (shoes)', 9000)" class="addtocart-button">
+                    <div class="cartbtn">
+                        <img src="img/cart.svg" alt="Cart">
+                    </div>
+                </button>
+            </div>
+            <div class="pro">
+                <img src="img/shoes/s63.jpg" alt="Ladies Wedge Heels 4 Product Image">
+                <div class="des">
+                    <span>shoes</span>
+                    <h5>Ladies Wedge Heels 4</h5>
+                    <div class="star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                    </div>
+                    <h4>₦9000</h4>
+                    <p class="resell-price">Available in Gold, Black and Silver<p>
+                    <p class="resell-price">Sizes 37-42<p>
+                </div>
+                <button onclick="addToCart('Ladies Wedge Heels 4 (shoes)', 9000)" class="addtocart-button">
+                    <div class="cartbtn">
+                        <img src="img/cart.svg" alt="Cart">
+                    </div>
+                </button>
+            </div>
+            <div class="pro">
+                <img src="img/shoes/s64.jpg" alt="Ladies Wedge Heels 5 Product Image">
+                <div class="des">
+                    <span>shoes</span>
+                    <h5>Ladies Wedge Heels 5</h5>
+                    <div class="star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                    </div>
+                    <h4>₦9000</h4>
+                    <p class="resell-price">Available in Gold, Black and Silver<p>
+                    <p class="resell-price">Sizes 37-42<p>
+                </div>
+                <button onclick="addToCart('Ladies Wedge Heels 5 (shoes)', 9000)" class="addtocart-button">
+                    <div class="cartbtn">
+                        <img src="img/cart.svg" alt="Cart">
+                    </div>
+                </button>
+            </div>
+            <div class="pro">
+                <img src="img/shoes/s65.jpg" alt="Ladies Wedge Heels 4 Product Image">
+                <div class="des">
+                    <span>shoes</span>
+                    <h5>Ladies Wedge Heels 4</h5>
+                    <div class="star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                    </div>
+                    <h4>₦9000</h4>
+                    <p class="resell-price">Available in Gold, Black and Silver<p>
+                    <p class="resell-price">Sizes 37-42<p>
+                </div>
+                <button onclick="addToCart('Ladies Wedge Heels 4 (shoes)', 9000)" class="addtocart-button">
+                    <div class="cartbtn">
+                        <img src="img/cart.svg" alt="Cart">
+                    </div>
+                </button>
+            </div>
+            <div class="pro">
+                <img src="img/shoes/s66.jpg" alt="Sneakers Product Image">
+                <div class="des">
+                    <span>shoes</span>
+                    <h5>Sneakers</h5>
+                    <div class="star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                    </div>
+                    <h4>₦13000</h4>
+                    <p class="resell-price">Sizes 37-42<p>
+                </div>
+                <button onclick="addToCart('Sneakers (shoes)', 13000)" class="addtocart-button">
+                    <div class="cartbtn">
+                        <img src="img/cart.svg" alt="Cart">
+                    </div>
+                </button>
+            </div>
+            <div class="pro">
+                <img src="img/shoes/s67.jpg" alt="Fashion Sneakers Product Image">
+                <div class="des">
+                    <span>shoes</span>
+                    <h5>Fashion Sneakers</h5>
+                    <div class="star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                    </div>
+                    <h4>₦16000</h4>
+                    <p class="resell-price">Sizes 38-42<p>
+                </div>
+                <button onclick="addToCart('Fashion Sneakers (shoes)', 16000)" class="addtocart-button">
+                    <div class="cartbtn">
+                        <img src="img/cart.svg" alt="Cart">
+                    </div>
+                </button>
+            </div>
+            <div class="pro">
+                <img src="img/shoes/s68.jpg" alt="Fashion Canvas Product Image">
+                <div class="des">
+                    <span>shoes</span>
+                    <h5>Fashion Canvas</h5>
+                    <div class="star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                        <img src="img/star.svg" alt="Star">
+                    </div>
+                    <h4>₦14000</h4>
+                    <p class="resell-price">Sizes 38-42<p>
+                </div>
+                <button onclick="addToCart('Fashion Canvas (shoes)', 14000)" class="addtocart-button">
+                    <div class="cartbtn">
+                        <img src="img/cart.svg" alt="Cart">
+                    </div>
+                </button>
+            </div>
+        </div>
+    </section>
+    
+
+    <section id="newsletter" class="section-p1 section-m1">
+        <div class="newstext">
+            <h4>Sign Up For Newsletters</h4>
+            <p>Get E-mail updates about our latest shop and <span>special offers.</span></p>
+        </div>
+        <form class="form" action="https://submit-form.com/xQh5bc5fo" method="post">
+            <input type="text" name="email" placeholder="Your email address" required>
+            <button class="normal" type="submit">Sign Up</button>
+        </form>
+    </section>
+
+    <footer class="section-p1">
+        <div class="col">
+            <img class="logo" src="img/logo1.png" alt="Edith's World Landscape Logo">
+            <h4>Contact</h4>
+            <p><strong>Address:</strong> 7 Olorunisola street, Mushin Market, Lagos, Nigeria</p>
+            <p><strong>Phone:</strong> <a href="https://wa.me/+2348037906641" class="link">08037906641</a></p>
+            <p><strong>Hours:</strong> 08:00 - 20:00. Mon - Sat</p>
+            <div class="follow">
+                <h4>Follow Us</h4>
+                <div class="icon">
+                    <a href="https://www.facebook.com/profile.php?id=100091634023999&mibextid=ZbWKwL">
+                        <img src="img/fb.svg" alt="Facebook Page Icon">
+                    </a>
+                    <a href="https://www.facebook.com/profile.php?id=61562935919298&mibextid=ZbWKwL">
+                        <img src="img/fb.svg" alt="Facebook Page Icon">
+                    </a>
+                    <a href="https://www.instagram.com/unique_quality.perfumery1212?igsh=MnhheWJtZWMwdjBi">
+                        <img src="img/it.svg" alt="Instagram Icon">
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <h4>Shop</h4>
+            <a href="perfumes.html">Perfumes</a>
+            <a href="healthcare.html">Healthcare</a>
+            <a href="clothes.html">Clothes</a>
+            <a href="shoes.html">Shoes</a>
+            <a href="contact.html">Contact Us</a>
+        </div>
+        <div class="col">
+            <h4>Commnunity</h4>
+            <a href="https://www.facebook.com/profile.php?id=100091634023999&mibextid=ZbWKwL">Perfume Page</a>
+            <a href="https://www.facebook.com/profile.php?id=61562935919298&mibextid=ZbWKwL">Clothes Page</a>
+            <a href="https://chat.whatsapp.com/LdeGqw7hKcX8o4kTsRX0Z2">Perfume Group</a>
+            <a href="https://chat.whatsapp.com/BwMUFrqKMdg5NwULuShPTe">Clothes Group</a>
+            <a href="https://chat.whatsapp.com/KjdcWhLzmEz2msfB8RqZMI">Health Group</a>
+        </div>
+        <div class="col install">
+            <h4>Install App</h4>
+            <p>Available for Direct Download</p>
+            <div class="row">
+                <a href="http://www.appcreator24.com/app3349698-p3wqki"><img src="img/pay/download.png" alt="Download Button for Mobile App"></a>
+            </div>
+            <p>Simple & Secure Payments</p>
+        </div>
+        <div class="copyright">
+            <p>© 2024 Edith's World</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
